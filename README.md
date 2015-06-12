@@ -1,4 +1,3 @@
-# fluid
 
 An experiment in using data flow programs to create animations.
 ===============================================================
@@ -16,9 +15,9 @@ change what is commented out in the source file "may_9_15_experiment.pde".
 
 This is one of the experiments for the line of research described
 in the following preprint on linear models of computation: 
-http://www.cs.brandeis.edu//~bukatin/LinearModelsProgramLearning.pdf
+http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
 (currently this is the last link at 
-http://www.cs.brandeis.edu//~bukatin/partial_inconsistency.html )
+http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
 
 Any questions or comments, feel free to e-mail to the first author
 of that preprint.
