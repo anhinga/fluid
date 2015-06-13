@@ -4,7 +4,9 @@ An experiment in using data flow programs to create animations.
 
 This experiment is done in Processing;
 tested for Processing 2.2.1
-under Windows 7 and Mac OS X 10.8.5
+under Windows 7 and Mac OS X 10.8.5.
+Processing can be downloaded from
+https://processing.org/
 
 The two example data flow graphs are contained in the source files
 "may_8_graph.pde" and "may_9_graph.pde". By default the first graph is
