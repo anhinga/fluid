@@ -12,6 +12,8 @@ For the "may_9_15_experiment"
 the two example data flow graphs are contained in the source files
 "may_8_graph.pde" and "may_9_graph.pde". By default the first graph is
 used, it is a directed acyclic graph (does not contain loops). 
+For a short video recording 30 seconds of interactively working
+with this program see https://youtu.be/fEWcg_A5UZc
 
 To switch to the other one (which does contain a loop)
 change what is commented out in the source file "may_9_15_experiment.pde".
