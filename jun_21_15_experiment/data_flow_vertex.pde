@@ -1,13 +1,13 @@
 // target node, with its associated transform, sources if any, and controller(s) and references to sources
 
-// this is a container, not a base class (and need to think how to handle the positioning,
-// positioning might still belong here). Some refactoring is needed because we were
-// trying to use this as a base class (but it does not work, because we also have
-// a transform in our algebra, changing the content of a node).
+// this is a container, not a base class 
+//
+// the reason for this is that we have a transform in our algebra ("special insert")
+// which changes the content of a node
 
-// in particular, constant node might eventually be not just an image,
+// in particular, a node might eventually be not just an image,
 // but something else, for example it might be a graph,
-// which is why we are not sticking the fields from data_rectangle here
+// which is why we are not putting the image fields here
 
 // but we do believe that basic imaging parameters are associated with every type of node,
 // e.g. visible or not and the associated rectangle, so we include those here

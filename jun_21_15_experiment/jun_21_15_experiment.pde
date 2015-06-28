@@ -15,8 +15,6 @@ void draw () {
   editor.tweak_optionally(main);
 }
 
-///* Add controllers back in the next version
-
 void mousePressed() {
   main.try_controls(mouseX, mouseY, 0, 0);
 }

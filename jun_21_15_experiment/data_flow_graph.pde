@@ -33,7 +33,8 @@ class DataFlowGraph {
   // auxiliary function, a helper to limited_deep_copy
   // the resulting graph is not ready for use yet
   //
-  // the memory handling logic here is only good for small examples
+  // the memory handling logic here is only good for small examples,
+  // because of the way "append" is used above
   //
   DataFlowGraph aux_recursive_copy(int delta_x, int delta_y) {
     DataFlowGraph new_copy = new DataFlowGraph(left_x + delta_x, left_y + delta_y);
@@ -88,8 +89,10 @@ class DataFlowGraph {
   
   /********** Public functions ****************************************************************************/
   
-  // the target_nodes are all copies, the references to external sources are kept, 
-  // the references to sources within the graph are updated per deep_copy metaphor
+  // The target_nodes are all copied, the references to external sources are kept, 
+  // the references to sources within the graph are updated per deep_copy metaphor.
+  // The outgoing links are not explicitly represented in this implementation,
+  // hence the outgoing external links are omitted in the new copy, just as we want.
   DataFlowGraph limited_deep_copy (int delta_x, int delta_y) {
     DataFlowGraph new_copy = aux_recursive_copy(delta_x, delta_y);
     new_copy.update_sources();

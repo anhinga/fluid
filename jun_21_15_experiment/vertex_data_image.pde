@@ -1,9 +1,15 @@
 // content of the constant node associated with a fixed image
 // (the node is still categorized as a "target node" in the brave new world of "limited_deep_copy")
-
+//
 // eventually we might add a controller here for the purpose of image selection
 //
 // if we do that we might rethink draw_image for this type of node
+
+// OUR MENTAL HERE IS ALL WRONG BECAUSE WE INHERIT A DYNAMIC IMAGE FROM IT
+//
+// This is only the constant node in its base class incarnation
+//
+// We need to find different wording to describe this
 
 class VertexDataImage extends VertexData {
   
