@@ -35,7 +35,7 @@ the controllers on the right of the images generated
 as lienar combination for may_9 experiment,
 and for jun_21 experiment those coefficients are controlled
 by clicking on those images themselves (and by the script
-which dynamically changes the programi). Clicking and dragging
+which dynamically changes the program). Clicking and dragging
 works the same as high-frequency multiple clicking 
 (try it not only for linear
 combinations, but also for waves).
@@ -49,6 +49,11 @@ of the dynamically changing program. But this is a start
 of true higher-order stream-based programming, as the
 node containing a data flow graph can be linked to
 other nodes of this graph in the future.
+
+For a short video recording 30 seconds of interactively 
+working with this program while it evolves (under
+somewhat compressed timeline) see 
+https://youtu.be/gL2L7otx-qc
 
 ### -------------
 
