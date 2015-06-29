@@ -94,6 +94,12 @@ class DataFlowGraph {
   void draw_symbolic (int context_x, int context_y, float coef, float ratio) {
     int new_context_x = context_x + (int)(ratio*left_x);
     int new_context_y = context_y + (int)(ratio*left_y);
+    int new_size_x = (int)(ratio*size_x)-20; // -20 is a hack for a not-well-understood situation
+    int new_size_y = (int)(ratio*size_y);
+    stroke(100);
+    noFill();
+    rect(new_context_x, new_context_y, new_size_x, new_size_y);
+    stroke(0);
     for (int i = 0; i < target_nodes.length; i++)
       target_nodes[i].draw_symbolic(new_context_x, new_context_y, coef, ratio);
     for (int i = 0; i < subgraphs.length; i++)

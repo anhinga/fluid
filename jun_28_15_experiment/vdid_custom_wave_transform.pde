@@ -35,7 +35,9 @@ class VDID_CustomWaveTransform extends VertexDataImageDynamic {
   void draw_symbolic(int context_x, int context_y, int font_size) {
     textSize(font_size);
     fill(0);
-    text("~~~", context_x, context_y);   
+    text("~~~", context_x, context_y - font_size/5);
+    text("~~~", context_x, context_y + font_size/5);
+    text("~~~", context_x, context_y + font_size/5*3);   
   }  
   
   void apply_transform() {

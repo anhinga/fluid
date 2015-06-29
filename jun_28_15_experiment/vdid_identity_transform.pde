@@ -17,6 +17,12 @@ class VDID_IdentityTransform extends VertexDataImageDynamic {
     return new_vertex_data;
   }
   
+  void draw_symbolic(int context_x, int context_y, int font_size) {
+    textSize(font_size);
+    fill(0);
+    text("Id", context_x, context_y);   
+  }  
+  
   void apply_transform() {
     
     int output_width = my_vertex.size_x;

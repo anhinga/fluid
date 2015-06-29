@@ -35,7 +35,9 @@ class VertexDataDFGraph extends VertexData {
     if (my_vertex.visible) {
       stroke(0);
       noFill();
+      strokeWeight(2);
       rect(context_x+my_vertex.left_x, context_y+my_vertex.left_y, my_vertex.size_x, my_vertex.size_y);
+      strokeWeight(1);
       float coef = 0.3;
       float ratio = 1.0;
       ratio = ratio * my_vertex.size_x / my_vertex.parent.size_x;

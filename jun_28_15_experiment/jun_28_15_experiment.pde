@@ -3,7 +3,7 @@ DataFlowGraph main;
 ProgramEditor editor;
 
 void setup () {
-  main = new DataFlowGraph(10, 10, 1500, 1000, true);
+  main = new DataFlowGraph(25, 25, 1500, 1000, true);
   editor = new ProgramEditor();
   
   size(1520, 1020); // I don't know yet where to put this
