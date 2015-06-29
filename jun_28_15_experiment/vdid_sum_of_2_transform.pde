@@ -15,7 +15,15 @@ class VDID_SumOf2Transform extends VertexDataImageDynamic {
     copy_images(new_vertex_data);
     return new_vertex_data;
   }
-  
+
+  boolean isVertex_VDID_SumOf2Transform() {
+    return true;
+  }
+
+  float get_interpolation_coef() {
+    return interpolation_coef;
+  }
+      
   void set_coef (float _coef) {
     interpolation_coef = _coef;
   } 

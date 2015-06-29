@@ -85,7 +85,7 @@ class ProgramEditor {
          
     if (frameCount == 150) {
       println("Special insert");
-      special_insert(main.subgraphs[1].target_nodes[0], main.subgraphs[0].target_nodes[1], -200, 0, true); 
+      special_insert(main.subgraphs[1].target_nodes[0], main.subgraphs[0].target_nodes[1], -200, 100, true); 
     }
     
     if (frameCount > 200 && frameCount <= 300) {

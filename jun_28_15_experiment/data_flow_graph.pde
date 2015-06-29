@@ -90,7 +90,7 @@ class DataFlowGraph {
       subgraphs[i].draw_images(new_context_x, new_context_y);     
   }
  
-  // to draw the graph as a program
+  // to draw the graph as a program (nodes only)
   void draw_symbolic (int context_x, int context_y, float coef, float ratio) {
     int new_context_x = context_x + (int)(ratio*left_x);
     int new_context_y = context_y + (int)(ratio*left_y);
@@ -99,6 +99,16 @@ class DataFlowGraph {
     for (int i = 0; i < subgraphs.length; i++)
       subgraphs[i].draw_symbolic(new_context_x, new_context_y, coef, ratio);     
   } 
+  
+  
+  // to draw the graph as a program (edges only; must be called after draw_symbolic)
+  void draw_edges () {
+    for (int i = 0; i < target_nodes.length; i++)
+      target_nodes[i].draw_edges();
+    for (int i = 0; i < subgraphs.length; i++)
+      subgraphs[i].draw_edges();     
+  } 
+  
   /********** Public functions ****************************************************************************/
   
   // The target_nodes are all copied, the references to external sources are kept, 

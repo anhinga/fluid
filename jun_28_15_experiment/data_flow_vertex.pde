@@ -26,6 +26,17 @@ class DataFlowVertex {
   VertexData vertex_data; // content of the vertex: data, associated transform, controller(s) if any
   
   DataFlowVertex sources[]; // 0 or more sources 
+
+  // the following fields are filled by draw_symbolic
+  // so that we know where the corners are on the symbolic
+  // diagram and can draw the edges
+  //
+  // THIS UGLY IMPLEMENTATION ONLY WORKS FOR THE WHOLE GRAPH WITH NO EXTERNAL SOURCES
+  int symbolic_left_x;
+  int symbolic_left_y;
+  int symbolic_size_x;
+  int symbolic_size_y;
+
   
   DataFlowVertex (DataFlowGraph _parent, int _left_x, int _left_y, int _size_x, int _size_y, boolean _visible) {
     reset_forward_source_reference(); 
@@ -90,12 +101,29 @@ class DataFlowVertex {
       fill(255);
     else
       fill(150);
-    int new_context_x = context_x + (int)(ratio*left_x);
-    int new_context_y = context_y + (int)(ratio*left_y);
-    int new_size_x = (int)(coef*ratio*size_x);
-    int new_size_y = (int)(coef*ratio*size_y);
-    rect(new_context_x, new_context_y, new_size_x, new_size_y);
-    vertex_data.draw_symbolic(new_context_x, new_context_y + new_size_y/2, new_size_y/2);     
+    symbolic_left_x = context_x + (int)(ratio*left_x);
+    symbolic_left_y = context_y + (int)(ratio*left_y);
+    symbolic_size_x = (int)(coef*ratio*size_x);
+    symbolic_size_y = (int)(coef*ratio*size_y);
+    rect(symbolic_left_x, symbolic_left_y, symbolic_size_x, symbolic_size_y);
+    vertex_data.draw_symbolic(symbolic_left_x, symbolic_left_y + symbolic_size_y/2, symbolic_size_y/2);     
+  }
+ 
+  void draw_edges() {     
+    for (int i =0; i < sources.length; i++) {
+      stroke(0);
+      if (vertex_data.isVertex_VDID_SumOf2Transform()) {
+        float value = vertex_data.get_interpolation_coef();
+        if (i==0)
+          stroke((int)(100*value));
+        else
+          stroke((int)(100*(1-value)));
+      }
+      DataFlowVertex src = sources[i];
+      line(src.symbolic_left_x+src.symbolic_size_x, src.symbolic_left_y, symbolic_left_x, symbolic_left_y + symbolic_size_y);
+      ellipse(symbolic_left_x, symbolic_left_y + symbolic_size_y, 5, 5);
+    }
+       
   } 
 
   void try_controls(int click_x, int click_y, int context_x, int context_y) {

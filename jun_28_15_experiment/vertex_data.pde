@@ -15,6 +15,13 @@ class VertexData {
     return false;
   }
   
+  boolean isVertex_VDID_SumOf2Transform() {
+    return false;
+  }
+  
+  float get_interpolation_coef() {
+    return 0.5;
+  }
   
   VertexData aux_copy() {
     // override

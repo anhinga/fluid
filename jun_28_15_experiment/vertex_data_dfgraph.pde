@@ -40,6 +40,7 @@ class VertexDataDFGraph extends VertexData {
       float ratio = 1.0;
       ratio = ratio * my_vertex.size_x / my_vertex.parent.size_x;
       df_graph.draw_symbolic(context_x+my_vertex.left_x, context_y+my_vertex.left_y, coef, ratio);
+      df_graph.draw_edges();
     }
   }
 
