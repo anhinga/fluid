@@ -24,6 +24,14 @@ which are evolving using **almost continuous transformations**
 and the program is executed while it changes on the fly in this almost
 continuous fashion.
 
+The "jun_28_15_experiment" is the first experiment where the
+data flow program contains itself in one of its own nodes.
+Currently this is only used to facilitate visualization
+of the dynamically changing program. But this is a start
+of true higher-order stream-based programming, as the
+node containing a data flow graph can be linked to
+other nodes of this graph in the future.
+
 Clicking on the wavemaking nodes restarts a wave at the point of
 click. The coefficients in the linear combinations are changed
 by clicking on the
@@ -35,6 +43,8 @@ which dynamically changes the programi). Clicking and dragging
 works the same as high-frequency multiple clicking 
 (try it not only for linear
 combinations, but also for waves).
+
+
 
 These are some of the experiments for the line of research described
 in the following preprint on linear models of computation: 
