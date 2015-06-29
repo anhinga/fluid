@@ -35,8 +35,14 @@ class VDID_SumOf2Transform extends VertexDataImageDynamic {
     textSize(font_size);
     fill(0);
     text("+", context_x, context_y);
+    font_size = font_size*4/5;
+    textSize(font_size);
     int coef = (int)(100*interpolation_coef);
-    text(str(coef), context_x, context_y+font_size); 
+    String s = "0.";
+    if (coef < 10) s = s+"0";
+    s = s+str(coef);
+    if (coef == 100) s = "1.00";
+    text(s, context_x, context_y+font_size); 
   }  
   
   void apply_transform() {
