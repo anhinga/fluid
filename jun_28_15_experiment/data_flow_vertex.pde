@@ -109,7 +109,8 @@ class DataFlowVertex {
     vertex_data.draw_symbolic(symbolic_left_x, symbolic_left_y + symbolic_size_y/2, symbolic_size_y/2);     
   }
  
-  void draw_edges() {     
+  void draw_edges() {
+    strokeWeight(2);    
     for (int i =0; i < sources.length; i++) {
       stroke(0);
       if (vertex_data.isVertex_VDID_SumOf2Transform()) {
@@ -123,6 +124,7 @@ class DataFlowVertex {
       line(src.symbolic_left_x+src.symbolic_size_x, src.symbolic_left_y, symbolic_left_x, symbolic_left_y + symbolic_size_y);
       ellipse(symbolic_left_x, symbolic_left_y + symbolic_size_y, 5, 5);
     }
+    strokeWeight(1);
        
   } 
 
