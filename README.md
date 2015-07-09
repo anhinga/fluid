@@ -61,7 +61,7 @@ These are some of the experiments for the line of research described
 in the following preprint on linear models of computation: 
 http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
 
-The details of May and June experiments are described in
+The software architecture of May and June experiments is described in
 this preprint: http://www.cs.brandeis.edu/~bukatin/HigherOrderDataFlow.pdf
 
 (currently these are the two last links at the bottom of 
@@ -69,4 +69,4 @@ http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
 
 
 Any questions or comments, feel free to e-mail to the first author
-of these preprint.
+of these preprints.
