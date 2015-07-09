@@ -60,12 +60,13 @@ https://youtu.be/gL2L7otx-qc
 These are some of the experiments for the line of research described
 in the following preprint on linear models of computation: 
 http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
-(currently this is the last link at 
+
+The details of May and June experiments are described in
+this preprint: http://www.cs.brandeis.edu/~bukatin/HigherOrderDataFlow.pdf
+
+(currently these are the two last links at the bottom of 
 http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
 
 
-The text describing the technicalities of those experiments is
-expected no later than mid-July.
-
 Any questions or comments, feel free to e-mail to the first author
-of that preprint.
+of these preprint.
