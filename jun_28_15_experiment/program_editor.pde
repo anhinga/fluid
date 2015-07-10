@@ -110,7 +110,7 @@ class ProgramEditor {
     return new_vertex;    
   }
   
-  // special insert is a hallmark of our calculus
+  // S-insert (soft insert/special insert) is a hallmark of our calculus
   // We have DataFlowVertex target_vertex, and it contains vertex_data.
   // The new_vertex is created and it will now contain vertex_data instead.
   // The target_vertex will now contain linear combination of 
@@ -121,7 +121,7 @@ class ProgramEditor {
   //  if the vertices to be glued together share the same parent graph;
   //  otherwise we are not sure)
   // Returns new_vertex for the unlikely event that you want it
-  // COORDS: the new_changes the coords, and might turn off visibility
+  // COORDS: the new_vertex changes the coords, and might turn off visibility
   DataFlowVertex special_insert(DataFlowVertex target_vertex, DataFlowVertex side_vertex, int delta_x, int delta_y, boolean visibility_off_for_new_vertex) {
     DataFlowVertex new_vertex = new DataFlowVertex(target_vertex.parent, target_vertex.left_x+delta_x, target_vertex.left_y+delta_y, 
                                                    target_vertex.size_x, target_vertex.size_y, 
