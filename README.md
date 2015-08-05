@@ -70,3 +70,14 @@ http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
 
 Any questions or comments, feel free to e-mail to the first author
 of these preprints.
+
+### -------------
+
+** August 5 note:** It turns out that the architecture described
+in our June experiments and July preprint can be modified to
+eliminate even benign discontinuities resulting in
+**continuous transformations** of software.
+
+We expect to post related software prototypes and preprints
+between now and mid-September 2015.
+
