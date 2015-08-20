@@ -77,7 +77,8 @@ eliminate even benign discontinuities resulting in
 Moreover, this architecture allows to represent data flow graphs
 of this class as **matrices of real numbers**.
 
-We just posted a related software prototype and expect to make
+We just posted a related software prototype, "aug_20_15_experiment", 
+and expect to make
 one or more videos and a preprint available today.
 
 The preprint describing this new development is available at
