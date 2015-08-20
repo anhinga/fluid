@@ -98,7 +98,9 @@ a particularly high variability from run to run).
 
 The 30 second video for the third listed configuration:
 https://youtu.be/-pFil1_GEA4 (it might actually be the best
-configuration, but I don't want to change the default right now).
+configuration, but I don't want to change the default right now,
+in part because it is so unpredictable, and it's nice for
+the default to be somewhat predictable).
 
 The preprint describing this new development is available at
 http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
