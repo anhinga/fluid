@@ -64,10 +64,6 @@ http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
 The software architecture of May and June experiments is described in
 this preprint: http://www.cs.brandeis.edu/~bukatin/HigherOrderDataFlow.pdf
 
-(currently these are the two last links at the bottom of 
-http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
-
-
 Any questions or comments, feel free to e-mail to the first author
 of these preprints.
 
@@ -84,3 +80,10 @@ of this class as **matrices of real numbers**.
 We just posted a related software prototype and expect to make
 one or more videos and a preprint available today.
 
+The preprint describing this new development is available at
+http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
+
+(This preprint might be lightly edited today.)
+
+(The preprints linked from this page are currently at the bottom of
+http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
