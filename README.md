@@ -73,11 +73,14 @@ of these preprints.
 
 ### -------------
 
-**August 5 note:** It turns out that the architecture described
+**August 5 - August 20 note:** It turns out that the architecture described
 in our June experiments and July preprint can be modified to
 eliminate even benign discontinuities resulting in
 **continuous transformations** of software.
 
-We expect to post related software prototypes and preprints
-between now and mid-September 2015.
+Moreover, this architecture allows to represent data flow graphs
+of this class as **matrices of real numbers**.
+
+We just posted a related software prototype and expect to make
+one or more videos and a preprint available today.
 
