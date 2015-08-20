@@ -92,6 +92,10 @@ The 30 second video for the default configuration is here:
 https://youtu.be/KZHQxdZUlSU (see the page of the video for
 a more detailed description).
 
+The 30 second video for the second listed configuration:
+https://youtu.be/rulK7l4jS-o (the one which we think has
+a particularly high variability from run to run).
+
 The preprint describing this new development is available at
 http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
 
