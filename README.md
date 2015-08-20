@@ -77,9 +77,16 @@ eliminate even benign discontinuities resulting in
 Moreover, this architecture allows to represent data flow graphs
 of this class as **matrices of real numbers**.
 
-We just posted a related software prototype, "aug_20_15_experiment", 
-and expect to make
-one or more videos and a preprint available today.
+We just posted a related software prototype implementing
+some **continuous cellular automata**, "aug_20_15_experiment".
+
+We expect to make one or more video previews available today.
+Note that we cannot make those video previews quite faithful;
+at the initial stage video compression software introduces
+some distortion, then it notices the problems with quality
+and offers to make enhancements, the result might be worse in
+some aspects and better in some other aspects than the video
+natively produced by the software.
 
 The preprint describing this new development is available at
 http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
