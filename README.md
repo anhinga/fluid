@@ -96,6 +96,10 @@ The 30 second video for the second listed configuration:
 https://youtu.be/rulK7l4jS-o (the one which we think has
 a particularly high variability from run to run).
 
+The 30 second video for the third listed configuration:
+https://youtu.be/-pFil1_GEA4 (it might actually be the best
+configuration, but I don't want to change the default right now).
+
 The preprint describing this new development is available at
 http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
 
