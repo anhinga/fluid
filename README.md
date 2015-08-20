@@ -88,6 +88,10 @@ and offers to make enhancements, the result might be worse in
 some aspects and better in some other aspects than the video
 natively produced by the software.
 
+The 30 second video for the default configuration is here:
+https://youtu.be/KZHQxdZUlSU (see the page of the video for
+a more detailed description).
+
 The preprint describing this new development is available at
 http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
 
