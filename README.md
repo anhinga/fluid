@@ -105,7 +105,5 @@ the default to be somewhat predictable).
 The preprint describing this new development is available at
 http://www.cs.brandeis.edu/~bukatin/DataFlowGraphsAsMatrices.pdf
 
-(This preprint might be lightly edited today.)
-
 (The preprints linked from this page are currently at the bottom of
 http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
