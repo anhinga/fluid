@@ -91,7 +91,7 @@ import java.util.Map;
 
 HashMap<String, Argument> arguments;
 HashMap<String, Operation> operations;
-HashMap<String, OpCoef>matrix_elements; // global dictionary of matrix elements is needed for higher-order programming
+HashMap<String, OpCoef> matrix_elements; // global dictionary of matrix elements is needed for higher-order programming
 
 
 String cell_name (int i, int j) {
@@ -121,13 +121,9 @@ void setup () {
       Argument new_arg = new Argument(new_arg_name);
       //new OpId(new_arg, cell_name(i, j));
       if ((i%gap_size==0)&&(j%gap_size==0)) {
-          OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(arg_for_weight_from_constants, new_arg_name, "White"); 
-          new_arg.add_new_higher_order_summand_op("White", for_new_matrix_element.hosted_op_coef);
-          //new_arg.add_new_summand_op("White", 1.0);          
+          create_higher_order_matrix_element(arg_for_weight_from_constants, new_arg, "White");       
       } else {
-          OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(arg_for_weight_from_constants, new_arg_name, "Black"); 
-          new_arg.add_new_higher_order_summand_op("Black", for_new_matrix_element.hosted_op_coef);
-          //new_arg.add_new_summand_op("Black", 1.0);
+          create_higher_order_matrix_element(arg_for_weight_from_constants, new_arg, "Black");
       }    
     }
 
@@ -149,9 +145,7 @@ void setup () {
                                               cell_name(i_cur, j_cur) + " for " + cell_name(i, j));
                
         Argument our_arg = arguments.get("arg " + cell_name(i, j));
-        OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(arg_for_weight_from_pattern, arg_name, op_name);
-        our_arg.add_new_higher_order_summand_op(op_name, for_new_matrix_element.hosted_op_coef); 
-        //our_arg.add_new_summand_op(new_op.name, 0.0);
+        create_higher_order_matrix_element(arg_for_weight_from_pattern, our_arg, op_name);
       }      
   
   size(board_size*square_size, board_size*square_size);
@@ -171,34 +165,7 @@ void draw () {
   }
   
   // conditionally adjust matrix weights
-  if (frameCount == 10) {
-    /*for (int i = 0; i < board_size; i++)
-      for (int j = 0; j < board_size; j++) {
-        String arg_name = "arg " + cell_name(i, j);
-        String op_name;
-        if ((i%gap_size==0)&&(j%gap_size==0))
-          op_name = "White";
-        else
-          op_name = "Black";
-        String matrix_element_name = compute_matrix_element_name(arg_name, op_name);
-        OpCoef our_op_coef = matrix_elements.get(matrix_element_name);
-        our_op_coef.coef = 0.0; // something like 1.0 - scale_factor*(frameCount - start_change_frame);
-                                // if one wants to do that continuously in the
-                                // interval of frameCount values
-        
-  
-        for (int k =0; k < arr_connect.length; k++) {
-          int[] pair = coord_modn(i,j, arr_connect[k], board_size);
-          int i_cur=pair[0], j_cur=pair[1];;
-          op_name = "aux " + cell_name(i_cur, j_cur) + " for " + cell_name(i, j);
-          matrix_element_name = compute_matrix_element_name(arg_name, op_name);
-          our_op_coef = matrix_elements.get(matrix_element_name);
-          our_op_coef.coef = KOEF; //something like KOEF*scale_factor*(frameCount - start_change_frame);
-                                   // if one wants to do that continuously in the
-                                   // interval of frameCount values
-        }
-      }  */
-    
+  if (frameCount == 10) {    
     String matrix_element_name = compute_matrix_element_name("arg weight from constants", "White");
     OpCoef our_op_coef = matrix_elements.get(matrix_element_name); 
     our_op_coef.coef = 0.0;

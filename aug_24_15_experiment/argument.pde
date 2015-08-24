@@ -15,6 +15,11 @@ class OpCoef {
   } 
 }
 
+void create_higher_order_matrix_element(Argument dependency_arg, Argument target_arg, String op_name) {
+  OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(dependency_arg, target_arg.name, op_name); 
+  target_arg.add_new_higher_order_summand_op(op_name, for_new_matrix_element.hosted_op_coef);
+}
+
 // ***** NEED TO ACTUALLY CHECK/CONTROL THE VALUE OF coef_sum ******
 
 class Argument {
