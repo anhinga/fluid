@@ -19,6 +19,11 @@ is introduced in preparation for properly higher-order
 matrix elements, and this is what's used at the moment
 for the first-and-half order programming schema currently in place.
 
+*****
+The first use of properly higher-order elements is added.
+The implemention schema is currently very clumsy,
+subject to revision.
+*****
 
 This is very much work in progress (it does work for the
 default experiment).

@@ -41,6 +41,13 @@ class Argument {
     matrix_elements.put(matrix_element_name, new_coef);    
   }
   
+  // **************** NEED TO CHECK THAT IT IS NEW *************
+  void add_new_higher_order_summand_op(String op_name, OpCoef _op_coef) {
+    String matrix_element_name = compute_matrix_element_name(name, op_name);
+    linear_combination.put(matrix_element_name, _op_coef);
+    matrix_elements.put(matrix_element_name, _op_coef);    
+  }
+  
   // compute value as a linear combination
   void apply() {
     value = 0.0;

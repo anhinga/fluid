@@ -107,16 +107,28 @@ void setup () {
   
   new OpWhite();
   new OpBlack();
+  
+  // abusing OpWhite as "Const 1" create some weight-controller numbers
+  Argument arg_for_weight_from_constants = new Argument("weight from constants");
+  Argument arg_for_weight_from_pattern = new Argument("weight from pattern elements");
+  arg_for_weight_from_constants.add_new_summand_op("White", 1.0);
+  arg_for_weight_from_pattern.add_new_summand_op("White", 0.0);
  
   // Board initialization
   for (int i = 0; i < board_size; i++)
     for (int j = 0; j < board_size; j++) {
-      Argument new_arg = new Argument(cell_name(i, j));
-      new OpId(new_arg, cell_name(i, j));
-       if ((i%gap_size==0)&&(j%gap_size==0))
-          new_arg.add_new_summand_op("White", 1.0);
-      else 
-          new_arg.add_new_summand_op("Black", 1.0);    
+      String new_arg_name = cell_name(i, j);
+      Argument new_arg = new Argument(new_arg_name);
+      //new OpId(new_arg, cell_name(i, j));
+      if ((i%gap_size==0)&&(j%gap_size==0)) {
+          OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(arg_for_weight_from_constants, new_arg_name, "White"); 
+          new_arg.add_new_higher_order_summand_op("White", for_new_matrix_element.hosted_op_coef);
+          //new_arg.add_new_summand_op("White", 1.0);          
+      } else {
+          OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(arg_for_weight_from_constants, new_arg_name, "Black"); 
+          new_arg.add_new_higher_order_summand_op("Black", for_new_matrix_element.hosted_op_coef);
+          //new_arg.add_new_summand_op("Black", 1.0);
+      }    
     }
 
   // Connectivity schema for the current
@@ -137,7 +149,9 @@ void setup () {
                                               cell_name(i_cur, j_cur) + " for " + cell_name(i, j));
                
         Argument our_arg = arguments.get("arg " + cell_name(i, j));
-        our_arg.add_new_summand_op(new_op.name, 0.0);
+        OpHigherOrderId for_new_matrix_element = new OpHigherOrderId(arg_for_weight_from_pattern, arg_name, op_name);
+        our_arg.add_new_higher_order_summand_op(op_name, for_new_matrix_element.hosted_op_coef); 
+        //our_arg.add_new_summand_op(new_op.name, 0.0);
       }      
   
   size(board_size*square_size, board_size*square_size);
@@ -158,7 +172,7 @@ void draw () {
   
   // conditionally adjust matrix weights
   if (frameCount == 10) {
-    for (int i = 0; i < board_size; i++)
+    /*for (int i = 0; i < board_size; i++)
       for (int j = 0; j < board_size; j++) {
         String arg_name = "arg " + cell_name(i, j);
         String op_name;
@@ -183,7 +197,15 @@ void draw () {
                                    // if one wants to do that continuously in the
                                    // interval of frameCount values
         }
-      }    
+      }  */
+    
+    String matrix_element_name = compute_matrix_element_name("arg weight from constants", "White");
+    OpCoef our_op_coef = matrix_elements.get(matrix_element_name); 
+    our_op_coef.coef = 0.0;
+   
+    matrix_element_name = compute_matrix_element_name("arg weight from pattern elements", "White"); 
+    our_op_coef = matrix_elements.get(matrix_element_name); 
+    our_op_coef.coef = KOEF;
   } 
   
   // apply linear combinations

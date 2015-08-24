@@ -50,12 +50,34 @@ class OpId extends Operation {
   OpId(Argument _arg, String _name) {
     super();
     arg = _arg;
-    name = "id "+_name;
+    name = "ID "+_name;
     register();
   }
   
   void apply() {
     result = arg.value; 
+  }
+}
+
+// the OpId for the purpose of higher-order programming
+// (this is a bit inartfully expressed for the time being)
+class OpHigherOrderId extends Operation {
+  
+  Argument dependency_arg;
+  OpCoef hosted_op_coef;
+  
+  OpHigherOrderId(Argument _dependency_arg, String target_arg_name, String op_name) {
+    super();
+    dependency_arg = _dependency_arg;
+    name = "id " + compute_matrix_element_name(target_arg_name, op_name);
+    Operation op = operations.get(op_name);
+    hosted_op_coef = new OpCoef(op, 0.0);
+    register();
+  }
+  
+  void apply() {
+    result = dependency_arg.value;
+    hosted_op_coef.coef = result; 
   }
 }
 
