@@ -8,9 +8,8 @@ Stop/resume control changes:
 Brightness normalization changes
   1) Strech the range two-fold (correct for the default experiment,
      but needs to be done better for the general case)
-  2) *1.004 in the randomized propagator (reasonable for the
-     probability value 0.995, but needs to be done better
-     for the general case)
+  2) Multiply by stabilizing_adjustment in the randomized propagator 
+    (1.004 is the value for the probability value 0.995)
 
 The matrix element naming schema changed to conform to
 the preprint schema in preparation for properly higher-order
@@ -21,8 +20,8 @@ for the first-and-half order programming schema currently in place.
 
 *****
 The first use of properly higher-order elements is added.
-The implemention schema is currently very clumsy,
-subject to revision.
+The implemention schema is currently somewhat clumsy,
+possibly subject to revision.
 *****
 
 This is very much work in progress (it does work for the

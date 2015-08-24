@@ -85,18 +85,21 @@ class OpRandomizedId extends Operation {
   
   Argument arg;
   float propagation_probability;
+  float stabilizing_adjustment; // to prevent it from converging to zer0
   
   OpRandomizedId(Argument _arg, float _propagation_probability, String _name) {
     super();
     arg = _arg;
     propagation_probability = _propagation_probability;
+    stabilizing_adjustment = 1.0 + 0.8*(1.0/propagation_probability - 1.0); 
+                                // 0.8 yields adjustment slightly above 1.004 for 0.995 propagation probability
     name = "aux "+_name;
     register();
   }
   
   void apply() {
     if (random(1.0) < propagation_probability)
-      result = arg.value*1.004;
+      result = arg.value*stabilizing_adjustment;
     else
       result = 0;    
   }
