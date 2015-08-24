@@ -93,6 +93,7 @@ class OpRandomizedId extends Operation {
     propagation_probability = _propagation_probability;
     stabilizing_adjustment = 1.0 + 0.8*(1.0/propagation_probability - 1.0); 
                                 // 0.8 yields adjustment slightly above 1.004 for 0.995 propagation probability
+                                // set stabilizing_adjustment to 1 if you don't need it
     name = "aux "+_name;
     register();
   }

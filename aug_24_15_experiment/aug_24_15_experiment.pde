@@ -14,6 +14,8 @@ int[][] arr_connect = {{1,0},{0,1},{-1,-1}}; // try different ones!
 float KOEF = 1./float(arr_connect.length); // normalization coefficient
 int stopFrame = 250; // stop after this many frames, so that one can see the static image
 int my_frame_rate = 10;
+boolean amplify_brightness = true; // set to false to turn it off
+float amplify_for_dark = 2.0; // additional amplification for dark images, set for 1.0 to turn it off
 
 
 /******** The default configuration (revert the above to this, if necessary)
@@ -26,6 +28,9 @@ int[][] arr_connect = {{1,0},{0,1},{-1,-1}}; // try different ones!
 float KOEF = 1./float(arr_connect.length); // normalization coefficient
 int stopFrame = 250; // stop after this many frames, so that one can see the static image
 int my_frame_rate = 10;
+boolean amplify_brightness = true; // set to false to turn it off
+float amplify_for_dark = 2.0; // additional amplification for dark images, set for 1.0 to turn it off
+
 ************************************/
 
 /******** Another particularly interesting configuration - different image each time
@@ -38,6 +43,8 @@ int[][] arr_connect = {{4,0},{-4,0},{1,1}, {-1,-1}}; // try different ones!
 float KOEF = 1./float(arr_connect.length); // normalization coefficient
 int stopFrame = 250; // stop after this many frames, so that one can see the static image
 int my_frame_rate = 10;
+boolean amplify_brightness = false;
+float amplify_for_dark = 1.0;
 ************************************/
 
 /******* Another configuration with an interesting diverse dynamics
@@ -50,6 +57,8 @@ int[][] arr_connect = {{8,0},{0,8},{8,8}, {-8,-8}}; // try different ones!
 float KOEF = 1./float(arr_connect.length); // normalization coefficient
 int stopFrame = 250; // stop after this many frames, so that one can see the static image
 int my_frame_rate = 10;
+boolean amplify_brightness = false;
+float amplify_for_dark = 1.0;
 *************************************/
 
 
@@ -191,13 +200,15 @@ void draw () {
     } 
   
   // render the image
-  float strength = 1 / max_arg_value; // "strength" is the brightness amplification coefficient
+  float strength = 1.0;
+  if (max_arg_value > 0 && amplify_brightness) 
+    strength = strength/max_arg_value; // "strength" is the brightness amplification
   for (int i = 0; i < board_size; i++)
     for (int j = 0; j < board_size; j++) {
       String arg_name = "arg " + cell_name(i, j);
       Argument arg = arguments.get(arg_name);
       float cell_value = strength * arg.value + 1.0; // +1.0 because of colorMode(RGB, 2.0)
-      cell_value = 2*cell_value;
+      cell_value = amplify_for_dark*cell_value;
       fill(cell_value, cell_value, cell_value);
       rect(i*square_size, j*square_size, square_size, square_size);
     } 
