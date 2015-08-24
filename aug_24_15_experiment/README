@@ -1,0 +1,25 @@
+This is a variation of aug_20_experiment
+
+Stop/resume control changes:
+  1) Press/release mouse button to stop/resume
+  2) Press "Space" key to stop 
+  3) Press/release mouse button to resume, if stopped
+
+Brightness normalization changes
+  1) Strech the range two-fold (correct for the default experiment,
+     but needs to be done better for the general case)
+  2) *1.004 in the randomized propagator (reasonable for the
+     probability value 0.995, but needs to be done better
+     for the general case)
+
+The matrix element naming schema changed to conform to
+the preprint schema in preparation for properly higher-order
+matrix elements. A global dictionary of matrix elements
+is introduced in preparation for properly higher-order
+matrix elements, and this is what's used at the moment
+for the first-and-half order programming schema currently in place.
+
+
+This is very much work in progress (it does work for the
+default experiment).
+
