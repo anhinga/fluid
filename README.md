@@ -61,8 +61,8 @@ These are some of the experiments for the line of research described
 in the following preprint on linear models of computation: 
 http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
 
-The reference publication, to appear in the proceedings of GCAI 2015:
-http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearningGCAI.pdf
+The reference publication in the proceedings of GCAI 2015:
+http://easychair.org/publications/download/Linear_Models_of_Computation_and_Program_Learning
 
 The software architecture of May and June experiments is described in
 this preprint: http://www.cs.brandeis.edu/~bukatin/HigherOrderDataFlow.pdf
