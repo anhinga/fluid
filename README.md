@@ -118,7 +118,7 @@ http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
 
 ### -------------
 
-**March 17 note:** This architecture is a generalization of
+**March 17, 2016 note:** This architecture is a generalization of
 recurrent neural networks. This has a variety of implications,
 to be discussed in a further preprint.
 
