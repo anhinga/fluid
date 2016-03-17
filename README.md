@@ -8,6 +8,8 @@ under Windows 7 and Mac OS X 10.8.5.
 Processing can be downloaded from
 https://processing.org/
 
+Processing 3 users see (Processing3.md) note.
+
 ### -------------
 
 For the "may_9_15_experiment"
