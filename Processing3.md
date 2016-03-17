@@ -19,20 +19,20 @@ https://github.com/processing/processing/wiki/Changes-in-3.0
 
 ### aug_24:
 
-this change in the setup() function in the main file of the sketch,
+this change in the `setup()` function in the main file of the sketch,
 "aug_24_15_experiment.pde":
 
-`//size(board_size*square_size, board_size*square_size);  
-size(640, 640);`
+    //size(board_size*square_size, board_size*square_size);  
+    size(640, 640);
 
 ### may_9:
 
-comment out call to size() in the file "may_8_graph.pde":
+comment out call to `size()` in the file "may_8_graph.pde":
 
 `//size (third_size + slider_width + margin_size, third_size);`
 
 and instead insert `size()` with constant parameters into
-the setup() function in the main file, may_9_15_experiment.pde:
+the `setup()` function in the main file, "may_9_15_experiment.pde"`:
 
 `void setup () {  
   current_run = new MasterConfig();  
