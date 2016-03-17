@@ -8,7 +8,7 @@ under Windows 7 and Mac OS X 10.8.5.
 Processing can be downloaded from
 https://processing.org/
 
-Processing 3 users see (Processing3.md) note.
+Processing 3 users see [Processing3.md](Processing3.md) note.
 
 ### -------------
 
