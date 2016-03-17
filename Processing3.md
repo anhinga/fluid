@@ -29,14 +29,14 @@ this change in the `setup()` function in the main file of the sketch,
 
 comment out call to `size()` in the file "may_8_graph.pde":
 
-`//size (third_size + slider_width + margin_size, third_size);`
+    //size (third_size + slider_width + margin_size, third_size);
 
 and instead insert `size()` with constant parameters into
-the `setup()` function in the main file, "may_9_15_experiment.pde"`:
+the `setup()` function in the main file, "may_9_15_experiment.pde":
 
-`void setup () {  
-  current_run = new MasterConfig();  
-  may_8_graph(current_run);  
-  size(965, 915);  
-}`
+    void setup () {  
+      current_run = new MasterConfig();  
+      may_8_graph(current_run);  
+      size(965, 915);  
+    }
 
