@@ -66,7 +66,16 @@ slides 39, 40 of http://www.cs.brandeis.edu/~bukatin/LinearModelsNeplsNov2015.pd
 (linked from http://www.cs.brandeis.edu/~bukatin/partial_inconsistency.html )
 
 
+A common preprint for May and Jun 2015 experiments, to serve as documentation: http://arxiv.org/abs/1601.00713
 
+--
+
+August 2015 experiments: bipartite graphs again, but this time of
+linear transformations (associated with "neuron inputs") and
+non-linear transfortions (built-in transformations associated with "neurons").
+
+Countable connectivity matrices with finite number of non-zero
+elements, strings as indices instead of numbers (for readability),
 
 
 
