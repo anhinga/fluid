@@ -126,3 +126,7 @@ http://arxiv.org/abs/1603.09002
 programming platform: http://arxiv.org/abs/1605.05296
 
 
+### -------------
+
+Supplementary materials for a talk at @party: [AtPartyTalk.md](AtPartyTalk.md)
+
