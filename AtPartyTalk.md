@@ -72,10 +72,12 @@ A common preprint for May and Jun 2015 experiments, to serve as documentation: h
 
 August 2015 experiments: bipartite graphs again, but this time of
 linear transformations (associated with "neuron inputs") and
-non-linear transfortions (built-in transformations associated with "neurons").
+non-linear transformations (built-in transformations associated with "neurons").
 
 Countable connectivity matrices with finite number of non-zero
 elements, strings as indices instead of numbers (for readability),
 
 
 
+
+<strong>to be continued: adding materials to this page</strong>
