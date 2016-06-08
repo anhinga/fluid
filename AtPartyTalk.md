@@ -137,6 +137,11 @@ https://en.wikipedia.org/wiki/Esoteric_programming_language
 
 https://en.wikipedia.org/wiki/Turing_tarpit
 
+
+Many other useful and elegant systems nevertheless belong to
+this class when one starts thinking about their qualities
+as a general-purpose language.
+
 But if one considers a suffiently strong generalization of
 RNNs, then one gets a system which can likely be used as a 
 convenient general-purpose programming language, while
@@ -176,3 +181,19 @@ small changes of parameters). But we hope that the construction in
 the sections 1.4 and 3.3 of the preprint will make it usable.
 
 <strong>to be continued: adding materials to this page</strong>
+
+---
+---
+---
+
+Back to the topic of the talk.
+
+It is easy to do your own dataflow experiments.
+
+It tends to be just a few hundred lines of code in any conventional
+software framework of your choice, as long as it is expressive enough
+to program cellular automata. (Shadertoy, alas, is not expressive
+enough to conveniently program cellular automata, so not Shadertoy :-) )
+
+You'll have full control and will be able to try your own ideas this way!
+
