@@ -77,7 +77,18 @@ non-linear transformations (built-in transformations associated with "neurons").
 Countable connectivity matrices with finite number of non-zero
 elements, strings as indices instead of numbers (for readability),
 
+Under this approach, after you fix the types of available neurons,
+the programs are defined by their matrices; so one can continuously
+transform a program while it is running, and one can synthesize
+by synthesizing its matrix.
 
+We implemented some continuous cellular automata in this architecture
+and observed some nice visual effects with emerging Turing structures.
+As neurons we used the "slightly noisy propagators", which usually just
+copy the input to the output, but occasionally output zero instead.
+
+These are August 2015 experiments and this preprint, to
+serve as documentation to these exprements: http://arxiv.org/abs/1601.01050
 
 
 <strong>to be continued: adding materials to this page</strong>
