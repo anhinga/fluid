@@ -80,19 +80,20 @@ elements, strings as indices instead of numbers (for readability),
 Under this approach, after you fix the types of available neurons,
 the programs are defined by their matrices; so one can continuously
 transform a program while it is running, and one can synthesize
-by synthesizing its matrix.
+a program by synthesizing its matrix.
 
 We implemented some continuous cellular automata in this architecture
 and observed some nice visual effects with emerging Turing structures.
-As neurons we used the "slightly noisy propagators", which usually just
-copy the input to the output, but occasionally output zero instead.
+We used the "slightly noisy propagators"i as neurons. They simply 
+copy the input to the output most of the time, 
+but occasionally output zero instead.
 
-These are August 2015 experiments and this preprint, to
+These are August 2015 experiments and this preprint can
 serve as documentation to these exprements: http://arxiv.org/abs/1601.01050
 
 ---
 
-Then we started to pay attention to the fact that our August dataflow
+Then we started to pay attention to the fact that our August 2015 dataflow
 architecture is a generalization of recurrent neural networks (RNNs),
 and in particular, the continuous cellular automata of our August 2015
 are just RNNs with slightly unusual neurons.
@@ -100,7 +101,7 @@ are just RNNs with slightly unusual neurons.
 <strong>RNNs are awesome</strong>
 
 I especially recomment this post by Andrej Karpathy,
-"The Unreasonable Effectiveness of Recurrent Neural Networks"
+"The Unreasonable Effectiveness of Recurrent Neural Networks":
 
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
@@ -117,7 +118,7 @@ and zeros in other coordinates, and then general vectors
 in this space have an interpretation as distributions over characters.
 
 In general, one can convert any discrete set to the continuous
-framework by considering the space of probability disctributions
+framework by considering the space of probability distributions
 over that discrete set, and then by considering streams of samples
 from those distributions (see section 1.2 of http://arxiv.org/abs/1605.05296 ).
 
