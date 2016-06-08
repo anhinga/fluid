@@ -188,12 +188,13 @@ the sections 1.4 and 3.3 of the preprint will make it usable.
 
 Back to the topic of the talk.
 
-It is easy to do your own dataflow experiments.
+<strong>It is easy to do your own dataflow experiments!</strong>
 
 It tends to be just a few hundred lines of code in any conventional
 software framework of your choice, as long as it is expressive enough
 to program cellular automata. (Shadertoy, alas, is not expressive
 enough to conveniently program cellular automata, so not Shadertoy :-) )
 
-You'll have full control and will be able to try your own ideas this way!
+You'll have full control and you will be able to try your own
+dataflow ideas this way!
 
