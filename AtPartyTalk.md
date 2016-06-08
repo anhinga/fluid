@@ -90,5 +90,37 @@ copy the input to the output, but occasionally output zero instead.
 These are August 2015 experiments and this preprint, to
 serve as documentation to these exprements: http://arxiv.org/abs/1601.01050
 
+---
+
+Then we started to pay attention to the fact that our August dataflow
+architecture is a generalization of recurrent neural networks (RNNs),
+and in particular, the continuous cellular automata of our August 2015
+are just RNNs with slightly unusual neurons.
+
+<strong>RNNs are awesome</strong>
+
+I especially recomment this post by Andrej Karpathy,
+"The Unreasonable Effectiveness of Recurrent Neural Networks"
+
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+(See in particular generated "math texts", and generated
+"Linux kernel code snippets".)
+
+This is also a good example of how the discrete data, in this
+case, sequences of characters, can be represented in
+a continuous framework. In this particular case, one takes
+an alphabet, and takes as many dimensions as there are letters
+in the alphabet, and a character is represented by a vector
+having 1 in the coordinate correponding to this character,
+and zeros in other coordinates, and then general vectors
+in this space have an interpretation as distributions over characters.
+
+In general, one can convert any discrete set to the continuous
+framework by considering the space of probability disctributions
+over that discrete set, and then by considering streams of samples
+from those distributions (see section 1.2 of http://arxiv.org/abs/1605.05296 ).
+
+
 
 <strong>to be continued: adding materials to this page</strong>
