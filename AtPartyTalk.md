@@ -160,15 +160,19 @@ linear streams.
 (It is also convenient to allow a neuron to have multiple output streams as well.)
 
 3) In particular, allow linear streams which are streams of matrices parametrizing neural nets, and equip neural nets with reflection facilities
-allowing the net to modify its own matrix (the matrix which controls the behavior of the net in question).
+allowing the net to modify its own matrix 
+(the matrix which controls the behavior of the net in question;
+see section 3.3 of the http://arxiv.org/abs/1605.05296 preprint).
 
-Here the 3), that is the <strong>reflection facilities</strong> is
+Here the 3), that is the <strong>reflection facilities</strong>, is
 the most crazy. The basic idea of that goes some decades back:
 
 http://www.scholarpedia.org/article/Metalearning#Neural_metalearners_that_learn_learning_algorithms
 
 People are not really using this, mostly because of this "Turing tarpit"
-property (very awkward encodings leading to high sensitivity to
-small changes of parameters).
+property (in particular, very awkward encodings leading to high sensitivity
+of behavior to
+small changes of parameters). But we hope that the construction in
+the section 3.3 of the preprint will make it usable.
 
 <strong>to be continued: adding materials to this page</strong>
