@@ -1,7 +1,7 @@
 Supplementary materials for the talk at @party
 ==============================================
 
-A talk by Mishka, "Make your own dataflow",
+A talk by Mishka, <strong>"Make your own dataflow"</strong>,
 Jun 4, 2016, http://atparty.untergrund.net/
 
 Based on joint work of the Project Fluid community.
@@ -122,6 +122,43 @@ framework by considering the space of probability distributions
 over that discrete set, and then by considering streams of samples
 from those distributions (see section 1.2 of http://arxiv.org/abs/1605.05296 ).
 
+---
+
+<strong>Dataflow matrix machines</strong>
+
+RNNs are awesome, and they are Turing-complete, but they are
+not a good general-purpose programming language. Instead, they
+belong to the class of esoteric programming languages and
+Turing tarpits:
+
+https://en.wikipedia.org/wiki/Esoteric_programming_language
+
+https://en.wikipedia.org/wiki/Turing_tarpit
+
+But if one considers a suffiently strong generalization of
+RNNs, then one gets a system which can likely be used as a 
+convenient general-purpose programming language, while
+retaining the key property of RNNs:
+parametrization of large classes of programs by matrices.
+
+Dataflow matrix machines generalize RNNs in three different ways.
+
+1) Allow us to have not just streams of reals numbers, 
+but arbitrary "linear streams" 
+(streams for which a notion of linear combination
+of several streams is reasonably well defined).
+
+2) Allow us to have 
+neurons accumulating not just one linear combination at the input, 
+but several different linear combinations, possibly
+of different types of "linear streams", 
+and allow freedom to equip the neurons with interesting 
+built-in transformations of
+linear streams. 
+(It is also convenient to allow a neuron to have multiple output streams as well.)
+
+3) In particular, allow linear streams which are streams of matrices parametrizing neural nets, and equip neural nets with reflection facilities
+allowing the net to modify its own matrix (the matrix which controls the behavior of the net in question).
 
 
 <strong>to be continued: adding materials to this page</strong>
