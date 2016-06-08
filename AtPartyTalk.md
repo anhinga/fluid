@@ -126,6 +126,8 @@ from those distributions (see section 1.2 of http://arxiv.org/abs/1605.05296 ).
 
 <strong>Dataflow matrix machines</strong>
 
+Preprint: http://arxiv.org/abs/1605.05296
+
 RNNs are awesome, and they are Turing-complete, but they are
 not a good general-purpose programming language. Instead, they
 belong to the class of esoteric programming languages and
@@ -143,7 +145,7 @@ parametrization of large classes of programs by matrices.
 
 Dataflow matrix machines generalize RNNs in three different ways.
 
-1) Allow us to have not just streams of reals numbers, 
+1) Allow us to have not just streams of real numbers, 
 but arbitrary "linear streams" 
 (streams for which a notion of linear combination
 of several streams is reasonably well defined).
@@ -160,5 +162,13 @@ linear streams.
 3) In particular, allow linear streams which are streams of matrices parametrizing neural nets, and equip neural nets with reflection facilities
 allowing the net to modify its own matrix (the matrix which controls the behavior of the net in question).
 
+Here the 3), that is the <strong>reflection facilities</strong> is
+the most crazy. The basic idea of that goes some decades back:
+
+http://www.scholarpedia.org/article/Metalearning#Neural_metalearners_that_learn_learning_algorithms
+
+People are not really using this, mostly because of this "Turing tarpit"
+property (very awkward encodings leading to high sensitivity to
+small changes of parameters).
 
 <strong>to be continued: adding materials to this page</strong>
