@@ -53,7 +53,8 @@ https://sourceforge.net/p/pure-data/pure-data/ci/master/tree/src/
 
 We have implemented 3 very different dataflow architectures in
 Project Fluid. In each case, it only took hundreds of lines
-of rather vanilla object-oriented code.
+of rather vanilla object-oriented code. (We used Processing,
+but almost any language would do equally well.)
 
 May 2015 experiments: bipartite graph of data nodes and transform nodes.
 Also controllers associated with transform nodes.
@@ -89,7 +90,7 @@ copy the input to the output most of the time,
 but occasionally output zero instead.
 
 These are August 2015 experiments and this preprint can
-serve as documentation to these exprements: http://arxiv.org/abs/1601.01050
+serve as documentation to these experiments: http://arxiv.org/abs/1601.01050
 
 ---
 
@@ -100,7 +101,7 @@ are just RNNs with slightly unusual neurons.
 
 <strong>RNNs are awesome</strong>
 
-I especially recomment this post by Andrej Karpathy,
+I especially recommend this post by Andrej Karpathy,
 "The Unreasonable Effectiveness of Recurrent Neural Networks":
 
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
@@ -113,7 +114,7 @@ case, sequences of characters, can be represented in
 a continuous framework. In this particular case, one takes
 an alphabet, and takes as many dimensions as there are letters
 in the alphabet, and a character is represented by a vector
-having 1 in the coordinate correponding to this character,
+having 1 in the coordinate corresponding to this character,
 and zeros in other coordinates, and then general vectors
 in this space have an interpretation as distributions over characters.
 
@@ -142,7 +143,7 @@ Many other useful and elegant systems nevertheless belong to
 this class when one starts thinking about their qualities
 as a general-purpose language.
 
-But if one considers a suffiently strong generalization of
+But if one considers a sufficiently strong generalization of
 RNNs, then one gets a system which can likely be used as a 
 convenient general-purpose programming language, while
 retaining the key property of RNNs:
@@ -196,5 +197,6 @@ to program cellular automata. (Shadertoy, alas, is not expressive
 enough to conveniently program cellular automata, so not Shadertoy :-) )
 
 You'll have full control and you will be able to try your own
-dataflow ideas this way!
+dataflow ideas this way (which might be more problematic, if you
+use a specialized dataflow framework made by someone else).
 
