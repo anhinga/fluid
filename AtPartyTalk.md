@@ -179,14 +179,14 @@ http://www.scholarpedia.org/article/Metalearning#Neural_metalearners_that_learn_
 
 People are not really using this ability of RNNs to modify their
 own matrices for a number of reasons
-(e.g. paper [J. Schmidhuber, A `self-referential' weight matrix, 1993]
+(e.g. paper [J. Schmidhuber, <em>A `self-referential' weight matrix</em>, 1993]
 seems to use very awkward encodings leading to high sensitivity
 of behavior of the net in question to
 small changes of parameters; 
 see section 2.1 of the preprint for further discussion). 
 
 But we hope that the construction in
-the sections 1.4 and 3.3 of the preprint would work better and will make this
+sections 1.4 and 3.3 of the preprint would work better and will make this
 self-modification facility usable in practice.
 
 --
