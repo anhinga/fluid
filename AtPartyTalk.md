@@ -178,8 +178,8 @@ the most crazy. The basic idea of that goes some decades back:
 http://www.scholarpedia.org/article/Metalearning#Neural_metalearners_that_learn_learning_algorithms
 
 People are not really using this ability of RNNs to modify their
-own matrices 
-(e.g. paper [J. Schmidhuber, A `self-referential' weight matrix, 1993]  
+own matrices for a number of reasons
+(e.g. paper [J. Schmidhuber, A `self-referential' weight matrix, 1993]
 seems to use very awkward encodings leading to high sensitivity
 of behavior of the net in question to
 small changes of parameters; 
