@@ -177,10 +177,14 @@ the most crazy. The basic idea of that goes some decades back:
 
 http://www.scholarpedia.org/article/Metalearning#Neural_metalearners_that_learn_learning_algorithms
 
-People are not really using this, mostly because of this "Turing tarpit"
-property (in particular, very awkward encodings leading to high sensitivity
+People are not really using this ability of RNNs to modify their
+own matrices 
+(mostly because of 
+very awkward encodings leading to high sensitivity
 of behavior to
-small changes of parameters). But we hope that the construction in
+small changes of parameters; 
+see section 2.1 of the preprint for further discussion). 
+But we hope that the construction in
 the sections 1.4 and 3.3 of the preprint would work better and will make this
 self-modification facility usable in practice.
 
