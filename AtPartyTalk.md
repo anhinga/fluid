@@ -85,7 +85,7 @@ a program by synthesizing its matrix.
 
 We implemented some continuous cellular automata in this architecture
 and observed some nice visual effects with emerging Turing structures.
-We used the "slightly noisy propagators"i as neurons. They simply 
+We used the "slightly noisy propagators" as neurons. They simply 
 copy the input to the output most of the time, 
 but occasionally output zero instead.
 
@@ -139,8 +139,10 @@ https://en.wikipedia.org/wiki/Esoteric_programming_language
 https://en.wikipedia.org/wiki/Turing_tarpit
 
 
-Many other useful and elegant systems nevertheless belong to
-this class when one starts thinking about their qualities
+Many other useful and elegant systems (e.g. Game of Life,
+LaTeX, the language of C++ templates) nevertheless belong to
+this class of esoteric programming languages and Turing tarpits
+when one starts thinking about their qualities
 as a general-purpose language.
 
 But if one considers a sufficiently strong generalization of
@@ -197,6 +199,8 @@ to program cellular automata. (Shadertoy, alas, is not expressive
 enough to conveniently program cellular automata, so not Shadertoy :-) )
 
 You'll have full control and you will be able to try your own
-dataflow ideas this way (which might be more problematic, if you
-use a specialized dataflow framework made by someone else).
+dataflow ideas this way. (If you
+use a specialized dataflow framework made by someone else,
+then you will not have full control, and it might be problematic
+to try your own dataflow idea).
 
