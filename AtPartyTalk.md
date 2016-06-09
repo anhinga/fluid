@@ -143,7 +143,7 @@ Many other useful and elegant systems (e.g. Game of Life,
 LaTeX, the language of C++ templates) nevertheless belong to
 this class of esoteric programming languages and Turing tarpits
 when one starts thinking about their qualities
-as a general-purpose language.
+as potential general-purpose languages.
 
 But if one considers a sufficiently strong generalization of
 RNNs, then one gets a system which can likely be used as a 
@@ -181,7 +181,35 @@ People are not really using this, mostly because of this "Turing tarpit"
 property (in particular, very awkward encodings leading to high sensitivity
 of behavior to
 small changes of parameters). But we hope that the construction in
-the sections 1.4 and 3.3 of the preprint will make it usable.
+the sections 1.4 and 3.3 of the preprint would work better and will make this
+self-modification facility usable in practice.
+
+--
+
+Jun 4, 2016 experiment. 
+
+The preprint http://arxiv.org/abs/1605.05296 suggests several promising
+programming techniques. One of these techniques is the use of multiplicative
+masks (use of the neuron's inputs as a multiplicative coefficient
+in the built-in transformation associated with this neuron).
+
+Multiplicative masks are great for various orchestration needs and redirection
+of flows of data in the network, because multiplication by zero is a great
+way to encode turning a part of the network off. So one can use
+multiplicative masks to implement conditionals. If one has a layered
+structure, and one does not want the layers to fire all at once,
+but one wants them to fire one after another instead, multiplicative
+masks are a great way to achieve that.
+
+The Jun 4 experiment is a light variation of Aug 2015 experiments which
+introduces multiplicative masks, and which also introduces neurons
+implementing trigonometric transforms for a rather spectacular series of
+self-organizing visual effects...
+
+--
+
+Another construction suggested in the preprint http://arxiv.org/abs/1605.05296 is nested patterns.
+
 
 <strong>to be continued: adding materials to this page</strong>
 
