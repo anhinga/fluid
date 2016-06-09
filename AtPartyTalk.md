@@ -213,10 +213,20 @@ self-organizing visual effects...
 
 --
 
-Another construction suggested in the preprint http://arxiv.org/abs/1605.05296 is nested patterns.
+Another construction suggested in the preprint http://arxiv.org/abs/1605.05296 
+is nested patterns.
 
+Basically, we know how to create a deep copy of a subgraph while
+preserving its incoming (and, optionally, outgoing) external
+connections. One can apply this construction repeatedly to
+create a pattern. And one can apply this construction in a nested
+way to create fairly intricate patterns. And one can allow the
+network itself to control triggering such deep copy operations
+and creating intricate patterns via this mechanism.
 
-<strong>to be continued: adding materials to this page</strong>
+With some luck we might be able to release an experiment demonstrating
+this facility sometime soon.
+
 
 ---
 ---
