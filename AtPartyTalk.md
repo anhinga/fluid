@@ -59,9 +59,11 @@ but almost any language would do equally well.)
 May 2015 experiments: bipartite graph of data nodes and transform nodes.
 Also controllers associated with transform nodes.
 
-Working with streams of images (that is, with animations), and built-in image
-transforms: a "wave transform" (reflection of an animation
-in synthetic waves), a "negation transform" (color inversion
+Working with streams of images (that is, with animations), 
+and built-in 
+transforms of the streams of images: 
+a "wave transform" (reflection of an animation
+in moving "synthetic water waves"), a "negation transform" (color inversion
 of an animation),
 and a convex linear combination of two animations).
 
