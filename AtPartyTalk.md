@@ -60,12 +60,12 @@ May 2015 experiments: bipartite graph of data nodes and transform nodes.
 Also controllers associated with transform nodes.
 
 Working with streams of images (that is, with animations), 
-and built-in 
+and with built-in 
 transforms of the streams of images: 
 a "wave transform" (reflection of an animation
 in moving "synthetic water waves"), a "negation transform" (color inversion
 of an animation),
-and a convex linear combination of two animations).
+and a convex linear combination of two animations.
 
 Jun 2015 experiments: the dataflow program changing in an almost
 continuous fashion while it is running; reflection facilities,
