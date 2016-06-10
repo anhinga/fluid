@@ -59,6 +59,12 @@ but almost any language would do equally well.)
 May 2015 experiments: bipartite graph of data nodes and transform nodes.
 Also controllers associated with transform nodes.
 
+Working with streams of images (that is, with animations), and built-in image
+transforms: a "wave transform" (reflection of an animation
+in synthetic waves), a "negation transform" (color inversion
+of an animation),
+and a convex linear combination of two animations).
+
 Jun 2015 experiments: the dataflow program changing in an almost
 continuous fashion while it is running; reflection facilities,
 allowing to depict program as it is changing; linear splicing:
@@ -242,8 +248,8 @@ to program cellular automata. (Shadertoy, alas, is not expressive
 enough to conveniently program cellular automata, so not Shadertoy :-) )
 
 You'll have full control and you will be able to try your own
-dataflow ideas this way. (If you
-use a specialized dataflow framework made by someone else,
-then you will not have full control, and it might be problematic
-to try your own dataflow idea).
+dataflow ideas this way. (On the other hand, if you
+use a specialized dataflow framework made by someone else instead,
+then you will most likely not have full control, and it might be problematic
+to try some of your own dataflow ideas).
 
