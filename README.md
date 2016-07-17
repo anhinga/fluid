@@ -125,6 +125,8 @@ http://arxiv.org/abs/1603.09002
 **May 17, 2016 note:** This architecture is a convenient general-purpose
 programming platform: http://arxiv.org/abs/1605.05296
 
+**July 17, 2016 note:** More down-to-earth examples of general-purpose
+programming in this architecture: http://arxiv.org/abs/1606.09470
 
 ### -------------
 
