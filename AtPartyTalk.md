@@ -248,8 +248,9 @@ It tends to be just a few hundred lines of code in any conventional
 software framework of your choice, as long as it is expressive enough
 to program cellular automata. (Shadertoy, alas, is not expressive
 enough to conveniently program cellular automata, so not Shadertoy :-)
-<strong>July 17 remark:</strong> Actually, with the new multipass
-feature cellular automata (and recurrent neural nets) seem to
+<strong>July 17 remark:</strong> Actually, with the
+introduction of the new multipass
+feature, cellular automata (and, hence, recurrent neural nets) seem to
 be possible in Shadertoy.)
 
 You'll have full control and you will be able to try your own
