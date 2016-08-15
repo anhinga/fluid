@@ -10,7 +10,7 @@ Neurons with linear activations functions allow to implement
 memory among other things. For example, a neuron with the
 identity activation function and with its output connected to
 its own input with weight one works as an accumulator of all
-other contribution from other neurons connected to its input.
+other contributions from other neurons connected to its input.
 
 Bilinear neurons are also useful for many purposes. 
 For example, consider a neuron with two inputs, with each

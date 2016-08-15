@@ -132,3 +132,7 @@ programming in this architecture: http://arxiv.org/abs/1606.09470
 
 Supplementary materials for a talk at @party: [AtPartyTalk.md](AtPartyTalk.md)
 
+### -------------
+
+**August 15, 2016 note:** Remarks on linear and bilinear neurons in LSTM and gated recurrent units [Id_Mult_for_LSTM_GRU_MGU.md](Id_Mult_for_LSTM_GRU_MGU.md)
+
