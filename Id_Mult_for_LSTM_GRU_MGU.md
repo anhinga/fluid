@@ -56,3 +56,10 @@ and bilinear neurons. So LSTM, GRU, and MGU networks are
 conventional recurrent neural networks using neurons with
 linear and bilinear activation functions together with
 more traditional types of neurons.
+
+---
+
+The conclusion is: when one sculpts recurrent neural networks,
+one should consider linear and bilinear neurons on par with
+more traditional neurons, such as logistic sigmoids, hyperbolic
+tangents, and ReLU.
