@@ -21,7 +21,7 @@ neuron is to consider one of those inputs as the "main input"
 and another one as the "modulating input" ("multiplicative mask",
 "gate"). 
 
-The presence of these contructions is very convenient and tends
+The presence of these constructions is very convenient and tends
 to add to the expressive power of the networks in question.
 For example, in 1987 Jordan Pollack found those constructions useful
 when researching the neural networks as a computational platform:
