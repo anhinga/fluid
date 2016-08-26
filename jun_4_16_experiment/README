@@ -1,4 +1,9 @@
-This is a variation of aug_20_experiment
+The Jun 4 2016 experiment is a light variation of Aug 24 2015 experiment
+which introduces multiplicative masks, and which also introduces
+neurons implementing trigonometric transforms for a rather spectacular
+series of self-organizing visual effects...
+
+Aug 24 2015 is a variation of aug_20_experiment
 
 Stop/resume control changes:
   1) Press/release mouse button to stop/resume
