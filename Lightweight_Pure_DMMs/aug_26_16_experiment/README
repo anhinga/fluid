@@ -1,0 +1,29 @@
+simple oscillations in the self-referential network... 
+
+only outputs[0], outputs[1], inputs[0], inputs[1]
+matter, the rest are left for decorative effect.
+
+outputs[1] is a constant network matrix with
+one non-zero element, (outputs[1]).matrix[1][1] = -2.0;
+
+the same element in the main network matrix is
+initially set to 1, (outputs[0]).matrix[1][1] = 1.0;
+
+On the down movement in this example, (inputs[1]).matrix =
+(outputs[0]).matrix[1][1]*(outputs[1]).matrix,
+in particular on the first down movement,
+(inputs[1]).matrix[1][1] = 1.0 * -2.0 = -2.0.
+
+On the first up movement, (outputs[0]).matrix[1][1] =
+(inputs[0]).matrix[1][1] + (inputs[1]).matrix[1][1] = 1.0+(-2.0) = -1.0.
+
+On the second down movement,
+(inputs[1]).matrix[1][1] = -1.0 * -2.0 = 2.0,
+(inputs[0]).matrix[1][1] = (outputs[0]).matrix[1][1] = -1.0.
+
+On the second up movement,
+(outputs[0]).matrix[1][1] = -1.0 + 2.0 = 1.0.
+
+Etc...
+
+
