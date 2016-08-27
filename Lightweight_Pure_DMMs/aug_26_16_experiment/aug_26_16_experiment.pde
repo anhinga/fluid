@@ -80,7 +80,7 @@ Matrix[] outputs;
 
 void setup() {
 
-  // frameRate(1);
+  frameRate(1);
   
   inputs = new Matrix[n_inputs];
   outputs = new Matrix[n_outputs];
@@ -102,12 +102,17 @@ void setup() {
   // (and use set_to_plus_constraint0 to maintain this) 
   // use (outputs[0]).matrix[1][*] to change the network matrix
   
+  
+  
+  (outputs[0]).matrix[1][1] = 1.0;
+  (outputs[1]).matrix[1][1] = -2.0;
+  
   (outputs[0]).matrix[2][0] = 0.5;
   
   (outputs[0]).matrix[4][0] = 0.5;
   (outputs[0]).matrix[5][0] = 0.5;
   
-  (outputs[0]).matrix[1][2] = -0.1;
+  //(outputs[0]).matrix[1][2] = -0.1;
   
   // graphics set-up
   
@@ -122,7 +127,7 @@ void setup() {
 }
 
 void draw() {
-  // recompute "inputs"
+  // recompute "inputs" ("down movement")
   for (int i = 0; i < n_inputs; i++) {
     inputs[i].init();
     for (int j = 0; j < n_outputs; j++) {
@@ -130,7 +135,7 @@ void draw() {
     } 
   }
   
-  // apply build-in transforms
+  // apply build-in transforms ("up movement")
   outputs[0].set_to_plus_constraint0(inputs[0], inputs[1]);
   outputs[2].set_to_plus(inputs[2], inputs[3]);
   outputs[4].set_to_mult(inputs[4], inputs[5]);
@@ -138,7 +143,7 @@ void draw() {
   outputs[8].set_to_max(inputs[8], inputs[9]);
   outputs[10].set_to_max(inputs[10], inputs[11]);
   
-  println(frameCount, (outputs[0]).matrix[0][0]);
+  println(frameCount, (outputs[0]).matrix[1][1], (inputs[1]).matrix[1][1]);
   
   // draw all matrices
   
