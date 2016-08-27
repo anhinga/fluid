@@ -1,0 +1,23 @@
+similar to aug_26, but with a soliton-like
+connectivity wave propagating with the body
+of the network...
+
+conceptually you can think about the important
+part of matrices involved in this example as
+2*N - the rest is just for decorative purposes
+or future additions...
+
+This is the important part of the program:
+
+  (outputs[0]).matrix[1][1] = 1.0;
+  (outputs[1]).matrix[1][1] = -1.0;
+  (outputs[1]).matrix[1][3] = 1.0;
+  (outputs[3]).matrix[1][3] = -1.0;
+  (outputs[3]).matrix[1][5] = 1.0;
+  (outputs[5]).matrix[1][5] = -1.0;
+  (outputs[5]).matrix[1][7] = 1.0;
+  (outputs[7]).matrix[1][7] = -1.0;
+  (outputs[7]).matrix[1][9] = 1.0;
+  (outputs[9]).matrix[1][9] = -1.0;
+  (outputs[9]).matrix[1][1] = 1.0;
+
