@@ -80,7 +80,7 @@ Matrix[] outputs;
 
 void setup() {
 
-  frameRate(1);
+  frameRate(4);
   
   inputs = new Matrix[n_inputs];
   outputs = new Matrix[n_outputs];
@@ -130,7 +130,7 @@ void setup() {
   size(square_size*hor_board_size, square_size*(vert_board_size+1));
   
   background(127);
-  noStroke();
+  //noStroke();
   colorMode(RGB, 2.0); // we map color segment [-1,1] ([black:white]) into segment [0,2] 
     
 }
