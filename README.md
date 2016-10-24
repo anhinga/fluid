@@ -15,7 +15,7 @@ Processing 3 users see [Processing3.md](Processing3.md) note.
 For the "may_9_15_experiment"
 the two example data flow graphs are contained in the source files
 "may_8_graph.pde" and "may_9_graph.pde". By default the first graph is
-used, it is a directed acyclic graph (does not contain loops). 
+used, it is a directed acyclic graph (does not contain loops).
 For a short video recording 30 seconds of interactively working
 with this program see https://youtu.be/fEWcg_A5UZc
 
@@ -38,7 +38,7 @@ as lienar combination for may_9 experiment,
 and for jun_21 experiment those coefficients are controlled
 by clicking on those images themselves (and by the script
 which dynamically changes the program). Clicking and dragging
-works the same as high-frequency multiple clicking 
+works the same as high-frequency multiple clicking
 (try it not only for linear
 combinations, but also for waves).
 
@@ -52,15 +52,15 @@ of true higher-order stream-based programming, as the
 node containing a data flow graph can be linked to
 other nodes of this graph in the future.
 
-For a short video recording 30 seconds of interactively 
+For a short video recording 30 seconds of interactively
 working with this program while it evolves (under
-somewhat compressed timeline) see 
+somewhat compressed timeline) see
 https://youtu.be/gL2L7otx-qc
 
 ### -------------
 
 These are some of the experiments for the line of research described
-in the following preprint on linear models of computation: 
+in the following preprint on linear models of computation:
 http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
 
 The reference publication in the proceedings of GCAI 2015:
@@ -136,3 +136,13 @@ Supplementary materials for a talk at @party: [AtPartyTalk.md](AtPartyTalk.md)
 
 **August 15, 2016 note:** Remarks on linear and bilinear neurons in LSTM and gated recurrent unit networks: [Id_Mult_for_LSTM_GRU_MGU.md](Id_Mult_for_LSTM_GRU_MGU.md)
 
+### -------------
+
+**October 24, 2016 note:** Latest preprint covering pure dataflow
+matrix machines and including our August 2016 experiments with
+lightweight pure dataflow matrix machines in this repository: https://arxiv.org/abs/1610.00831
+
+Latest presentation, "Self-Referential Mechanism for Dataflow Matrix Machines and Generalized Recurrent Neural Networks": (abstract: http://www.nepls.org/Events/30/abstracts.html#bukatin slides: http://www.cs.brandeis.edu/~bukatin/SelfReferentialDMMsOct2016.pdf)
+
+New open source effort to implement Dataflow Matrix Machines in Clojure:
+https://github.com/jsa-aerial/DMM
