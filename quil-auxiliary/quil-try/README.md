@@ -1,6 +1,6 @@
 # quil-try
 
-A Quil sketch designed to ... well, that part is up to you.
+a small quil experiment, a modification of the default quil poject
 
 ## Usage
 
