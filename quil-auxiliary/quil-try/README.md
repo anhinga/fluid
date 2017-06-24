@@ -1,6 +1,6 @@
 # quil-try
 
-a small quil experiment, a modification of the default quil poject
+a small quil experiment, a modification of the default quil project
 
 ## Usage
 

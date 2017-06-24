@@ -1,4 +1,4 @@
-The follow-up to project Fluid implements dataflow matrix machines in Clojure
+The follow-up to Project Fluid implements dataflow matrix machines in Clojure
 based on the space of V-values.
 
 See https://github.com/jsa-aerial/DMM for the follow-up project itself
