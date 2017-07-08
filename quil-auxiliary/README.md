@@ -11,3 +11,7 @@ done in Processing.
 This directory is for experiments with Quil, a Clojure wrapper
 for Processing, with the goal to eventually add rendering
 capabilities to our DMM implementation.
+
+Jul 7: Quil is now integrated into our DMM implementation:
+
+https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled
