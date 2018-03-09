@@ -67,7 +67,7 @@ Clojure/conj talk in 2014: https://www.youtube.com/watch?v=wDcN7yoZ6tQ
 Useful materials on architecture of Pink, on unit generators, etc:
 http://kunstmusik.github.io/pink/
 
-Useful examples: 
+**Useful examples:**
 
 https://github.com/kunstmusik/music-examples/tree/master/src/music_examples
 
@@ -94,6 +94,35 @@ like `(create-manager)` from this file (I have not tried it myself):
 https://github.com/kunstmusik/pink/blob/master/src/main/pink/io/midi.clj
 
 ## Composition of unit generators for music synthesis and for other purposes
+
+The resource I mentioned during the talk is one of the design notes in our
+**Dataflow matrix machines** project. This design note is written in Sep-Oct 2017
+and contains references to the original 1963 paper by Max Matthews,
+"The digital computer as a musical instrument", and to a very nice tutorial
+on music synthesis, "Sonifying Processing: The Beads Tutorial" by Evan Merz
+(free PDFs):
+
+https://github.com/jsa-aerial/DMM/blob/master/design-notes/Late-2017/following-audio-synthesis.md
+
+This design note also mentions that the compositions of unit generators
+are essentially neural nets, especially if one connects them via "gain units"
+(that is, weights).
+
+Of course, there is a variety of ways to express composition of unit generators
+syntactically. People do it in all kinds of ways, including functional programming,
+object-oriented programming, and more, and even languages which allow to visually
+edit the dataflow graphs, such as Max/MSP and Pure Data, e.g.
+https://en.wikipedia.org/wiki/Pure_Data#Code_examples
+
+Old fashioned visual synthesis with analog video synthesizers and oscilloscopes
+should also be views as synthesis via a composition of unit generators. Our recent
+exercise in that direction was to take a frequency modulation audio synthesis example 
+from the "Sonifying Processing" tutorial and extend it into a visual domain, so that
+frequency modulation is in sync both visually and in sound:
+
+https://github.com/anhinga/fluid/tree/master/beads-library
+
+This is in Processing, but I hope that this is easily convertable to Clojure.
 
 ## Remarks
 
