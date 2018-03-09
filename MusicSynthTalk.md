@@ -1,5 +1,5 @@
-Materials for Mishka's lightning talk on music synthesis in Clojure
-===================================================================
+Notes for Mishka's lightning talk on music synthesis in Clojure
+===============================================================
 
 I recently found a system for music synthesis **Pink**
 written in Clojure by Steven Yi. This is the set of notes for
@@ -47,3 +47,27 @@ Clojure is attractive. These notes are structured in 3 parts:
   * general materals related to unit generators and their
     composition;
   * remarks.
+
+## Steven Yi (kunstmusik on github)
+
+https://github.com/kunstmusik
+
+Repositories you want in connection with this are
+
+  * pink - the synthesis library itself
+  * score - library for generating music scores
+  * music-examples - using these two libraries
+  
+Actively maintained: https://github.com/kunstmusik/pink/releases
+
+Used by the author on the regular basis to make music.
+
+Clojure/conj talk in 2014: https://www.youtube.com/watch?v=wDcN7yoZ6tQ
+
+Useful materials on architecture of Pink, on unit generators, etc:
+http://kunstmusik.github.io/pink/
+
+## Composition of unit generators for music synthesis an for other purposes
+
+## Remarks
+
