@@ -67,7 +67,33 @@ Clojure/conj talk in 2014: https://www.youtube.com/watch?v=wDcN7yoZ6tQ
 Useful materials on architecture of Pink, on unit generators, etc:
 http://kunstmusik.github.io/pink/
 
-## Composition of unit generators for music synthesis an for other purposes
+Useful examples: 
+
+https://github.com/kunstmusik/music-examples/tree/master/src/music_examples
+
+The one I demonstrated:
+
+https://github.com/kunstmusik/music-examples/blob/master/src/music_examples/track1.clj
+
+One needs to execute some commented out lines at the end of it to make it work;
+I uncommented `(start-engine)` and `(play-from 0)`.
+
+If one wants to stop the sound (because it plays too long or indefinitely),
+one needs to evaluate `(stop-engine)`. (Don't just kill your Clojure program,
+this would only result in losing handle needed to conveniently stop the sound.)
+
+Some other examples might need updating to run with the current version of **pink**.
+
+For example, if one wants to use a midi keyboard and wants to try
+
+https://github.com/kunstmusik/music-examples/blob/master/src/music_examples/example2_basic.clj
+
+it looks like `(create-midi-manager)` is gone, you would probably want to use something
+like `(create-manager)` from this file (I have not tried it myself):
+
+https://github.com/kunstmusik/pink/blob/master/src/main/pink/io/midi.clj
+
+## Composition of unit generators for music synthesis and for other purposes
 
 ## Remarks
 
