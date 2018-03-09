@@ -106,7 +106,7 @@ https://github.com/jsa-aerial/DMM/blob/master/design-notes/Late-2017/following-a
 
 This design note also mentions that the compositions of unit generators
 are essentially neural nets, especially if one connects them via "gain units"
-(that is, weights).
+(that is, via weights).
 
 Of course, there is a variety of ways to express composition of unit generators
 syntactically. People do it in all kinds of ways, including functional programming,
@@ -115,7 +115,7 @@ edit the dataflow graphs, such as Max/MSP and Pure Data, e.g.
 https://en.wikipedia.org/wiki/Pure_Data#Code_examples
 
 Old fashioned visual synthesis with analog video synthesizers and oscilloscopes
-should also be views as synthesis via a composition of unit generators. Our recent
+should also be viewed as synthesis via a composition of unit generators. Our recent
 exercise in that direction was to take a frequency modulation audio synthesis example 
 from the "Sonifying Processing" tutorial and extend it into a visual domain, so that
 frequency modulation is in sync both visually and in sound:
@@ -125,4 +125,16 @@ https://github.com/anhinga/fluid/tree/master/beads-library
 This is in Processing, but I hope that this is easily convertable to Clojure.
 
 ## Remarks
+
+It was surprisingly difficult to find the Pink library. I was trying to find
+something like that by asking a number of people and by various Google searches
+for a few months, and I just found it accidently a week ago via this search:
+
+https://www.google.com/search?q=clojure+graphics+signal+processing
+
+(What I was looking for at that moment was the
+
+https://clojure2d.github.io/clojure2d/docs/articles/signalprocessing.html
+
+essay.)
 
