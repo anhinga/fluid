@@ -179,19 +179,19 @@ https://arxiv.org/abs/1712.07447
 A 15-min talk with the same title was made available (Dec 2017):
 https://youtu.be/X6GCohQ-LHM
 
-More recently we used the self-referential capabilities of the network
-to edit the running network on the fly: one sends a request for update
+More recently **we used the self-referential capabilities of the network
+to edit the running network on the fly**: one sends a request for update
 to one of the update neurons which produces an additive update for
 `Self` to absorb (January 25, 2018 experiment here:
 https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive
 )
 
-Still more needs to be done to start unlocking the potential of this
+We need to do more to start unlocking the potential of this
 formalism for innovative schemas of computation and learning.
 
 I think that, first of all, we need to build a more powerful and convenient
 interface and primitives for updating the running network on the fly
-in the spirit of January 25, 2018 in order to enable comfortable **livecoding**.
+in the spirit of our January 25, 2018 experiment in order to enable **comfortable livecoding**.
 
 This would allow us to reduce the cost of doing various experiments
 in this formalism.
