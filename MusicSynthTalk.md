@@ -138,3 +138,43 @@ https://clojure2d.github.io/clojure2d/docs/articles/signalprocessing.html
 
 essay.)
 
+**Update on dataflow matrix machines since our July 2017 lightning talk**
+
+Neural networks process streams of numbers. One can use the same formalism
+to process streams of images, streams of vectors, streams of probabilistic
+samples, and any kind of streams for which an operation of taking
+a linear combination of several streams is well-defined.
+
+It is particularly convenient to use streams of vector-like values based
+on nested dictionaries (**V-values**). The resulting generalization of
+neural network is sufficiently powerful to write programs in it; but
+the programs can be deformed in a continuous manner, just like neural nets.
+
+We call the resulting formalism **dataflow matrix machines**.
+
+Dataflow matrix machines (**DMMs**) are self-referential: one can dedicate a neuron
+(usually called `Self`) to accumulate the matrix expressing network connectivity
+and weights, and takes additive updates to this matrix from other neurons in
+the network.
+
+Dataflow matrix machines were presented during our lightning talk in July 2017:
+
+https://www.meetup.com/Boston-Clojure-Group/events/240535773/
+
+Since then the following modest progress was achieved:
+
+A simple DMM accumulating the list of mouse clicks was built in order to demonstrate
+that simple programming tasks which tend to be quite difficult to implement in
+conventional neural networks are often easy to implement in this formalism
+(July 13, 2017 experiment here:
+https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled
+)
+
+A full-size reference paper, *Dataflow Matrix Machines and V-values: 
+a Bridge between Programs and Neural Nets*, was published (Dec 2017):
+https://arxiv.org/abs/1712.07447
+
+A 15-min talk with the same title was made available (Dec 2017):
+https://youtu.be/X6GCohQ-LHM
+
+More recently...
