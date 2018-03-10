@@ -147,14 +147,16 @@ a linear combination of several streams is well-defined.
 
 It is particularly convenient to use streams of vector-like values based
 on nested dictionaries (**V-values**). The resulting generalization of
-neural network is sufficiently powerful to write programs in it; but
-the programs can be deformed in a continuous manner, just like neural nets.
+neural network is sufficiently powerful to write programs in it. At the
+same time these programs can be deformed in a continuous manner, 
+just like one can deform neural nets by gradually changing connectivity
+weights.
 
 We call the resulting formalism **dataflow matrix machines**.
 
 Dataflow matrix machines (**DMMs**) are self-referential: one can dedicate a neuron
 (usually called `Self`) to accumulate the matrix expressing network connectivity
-and weights, and takes additive updates to this matrix from other neurons in
+and weights, and to take additive updates to this matrix from other neurons in
 the network.
 
 Dataflow matrix machines were presented during our lightning talk in July 2017:
@@ -177,4 +179,22 @@ https://arxiv.org/abs/1712.07447
 A 15-min talk with the same title was made available (Dec 2017):
 https://youtu.be/X6GCohQ-LHM
 
-More recently...
+More recently we used the self-referential capabilities of the network
+to edit the running network on the fly: one sends a request for update
+to one of the update neurons which produces an additive update for
+`Self` to absorb (January 25, 2018 experiment here:
+https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive
+)
+
+Still more needs to be done to start unlocking the potential of this
+formalism for innovative schemas of computation and learning.
+
+I think that, first of all, we need to build a more powerful and convenient
+interface and primitives for updating the running network on the fly
+in the spirit of January 25, 2018 in order to enable comfortable **livecoding**.
+
+This would allow us to reduce the cost of doing various experiments
+in this formalism.
+
+I hope more people will join us in experimenting with this framework
+(either in collaboration with us, or on their own)...
