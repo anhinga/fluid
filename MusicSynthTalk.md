@@ -196,5 +196,9 @@ in the spirit of our January 25, 2018 experiment in order to enable **comfortabl
 This would allow us to reduce the cost of doing various experiments
 in this formalism.
 
+**March 27, 2018 update:** First prototype of livecoding environment for DMMs
+was released here:
+https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive
+
 I hope more people will join us in experimenting with this framework
 (either in collaboration with us, or on their own)...
