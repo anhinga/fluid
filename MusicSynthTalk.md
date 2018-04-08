@@ -93,6 +93,42 @@ like `(create-manager)` from this file (I have not tried it myself):
 
 https://github.com/kunstmusik/pink/blob/master/src/main/pink/io/midi.clj
 
+**April 8, 2018 update**. It is convenient to base one's initial experiments with **pink**
+on https://github.com/kunstmusik/music-examples/blob/master/src/music_examples/example1.clj
+
+E.g. to play a 40-hz sound with two higher harmonics, one can run `example1.clj` and then do
+
+`(in-ns 'music-examples.example1)`
+
+`(start-engine)`
+
+`(def s (add2 (mul 0.5 (sine 40.0)) (mul 0.3 (sine 80.0)) (mul 0.2 (sine 120.0))))`
+
+Start the sound:
+
+`(add-afunc s)`
+
+Stop the sound:
+
+`(remove-afunc s)`
+
+or
+
+`(stop-engine)`
+
+One might find the following function convenient:
+
+`(defn h [base-frequency & coefs]  
+  (apply add2  
+    (mapv (fn [k n] (mul n (sine (* k base-frequency)))) (iterate inc 1) coefs)))`
+    
+Then one can define `s` via
+
+`(def s (h 40.0 0.5 0.3 0.2))`
+
+**end of Apr 18, 2018 update**
+
+
 ## Composition of unit generators for music synthesis and for other purposes
 
 The resource I mentioned during the talk is one of the design notes in our
