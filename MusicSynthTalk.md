@@ -118,9 +118,9 @@ or
 
 One might find the following function convenient:
 
->`(defn h [base-frequency & coefs]
-  (apply add2 
-    (mapv (fn [k n] (mul n (sine (* k base-frequency)))) (iterate inc 1) coefs)))`
+`(defn h [base-frequency & coefs]`  
+`  (apply add2`  
+`    (mapv (fn [k n] (mul n (sine (* k base-frequency)))) (iterate inc 1) coefs)))`
     
 Then one can define `s` via
 
