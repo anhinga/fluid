@@ -96,7 +96,7 @@ https://github.com/kunstmusik/pink/blob/master/src/main/pink/io/midi.clj
 **April 8, 2018 update**. It is convenient to base one's initial experiments with **pink**
 on https://github.com/kunstmusik/music-examples/blob/master/src/music_examples/example1.clj
 
-E.g. to play a 40-hz sound with two higher harmonics, one can run `example1.clj` and then do
+E.g. to play a 40-hz monophonic sound with two higher harmonics, one can run `example1.clj` and then do
 
 `(in-ns 'music-examples.example1)`
 
@@ -127,6 +127,8 @@ One might find the following function convenient:
 Then one can define `s` via
 
 `(def s (h 40.0 0.5 0.3 0.2))`
+
+For stereo use `(pan your-unit-generator 0.0)`, e.g. `(def s (pan (h 40.0 0.5 0.3 0.2) 0.0))`
 
 **end of Apr 18, 2018 update**
 
