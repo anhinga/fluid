@@ -259,3 +259,10 @@ use a specialized dataflow framework made by someone else instead,
 then you will most likely not have full control, and it might be problematic
 to try some of your own dataflow ideas).
 
+---
+
+There is a video of the talk on the "bostondemoscene" youtube channel 
+(I am quite unhappy with the quality of my delivery of this material
+on that date, but including the link for completeness):
+
+https://youtu.be/c_sFxSB2cxg
