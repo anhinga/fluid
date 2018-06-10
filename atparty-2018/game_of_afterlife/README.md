@@ -1,12 +1,12 @@
-Code progression towards game_of_aterlife @party demo has been uploaded here, documentation is in progress...
+Code progression towards `game_of_afterlife` @party demo has been uploaded here, documentation is in progress...
 
 The last of those demos contains audio and requires the install of Beads library for Processing 2.2.1: http://www.beadsproject.net/
 
 ---
 
-The code evolved from https://github.com/anhinga/fluid/tree/master/Lightweight_Pure_DMMs (`aug_27_16_experiment`), described in https://arxiv.org/abs/1610.00831
+The code evolved from https://github.com/anhinga/fluid/tree/master/Lightweight_Pure_DMMs (`aug_27_16_experiment`), described in Appendix D of https://arxiv.org/abs/1610.00831
 
-That code is the first example of a self-modifying dataflow matrix machine (a more expressive version of neural network).
+That `aug_27_16_experiment` code is the first example of a self-modifying dataflow matrix machine (a more expressive version of neural networks).
 
 The engine in all these cases is a small handcrafted recurrent neural network processing streams of matrices instead of streams of numbers.
 
@@ -16,7 +16,9 @@ The master row is the second row of the master matrix. The network weights in th
 
 ---
 
-In September 2016, 'nekel' changed initialization of the output layer to random and added normalization. This resulted in runs occasionally producing unexpected non-trivial dynamics. In June 2018, 'anhinga' instrumented random initialization using explicit randomly drawn seeds, so that the discovered non-trivial dynamics can be reproduced. The resulting code with one of the interesting seeds is `afterlife_9_1_seed`.
+In September 2016, 'nekel' changed initialization of the output layer to random and added normalization. This resulted in runs occasionally producing unexpected non-trivial dynamics. This was the first example of self-modifying dataflow matrix machine which takes into account its own state when deciding how to modify itself.
+
+In June 2018, 'anhinga' instrumented random initialization using explicit randomly drawn seeds, so that the discovered non-trivial dynamics can be reproduced. The resulting code with one of the interesting seeds is `afterlife_9_1_seed`.
 
 ---
 
