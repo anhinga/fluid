@@ -1,4 +1,4 @@
-Code progression towards `game_of_afterlife` @party demo has been uploaded here, documentation is in progress...
+Code progression towards `game_of_afterlife` @party demo has been uploaded to this directory.
 
 The last of those demos contains audio and requires the install of Beads library for Processing 2.2.1: http://www.beadsproject.net/
 
@@ -16,13 +16,13 @@ The master row is the second row of the master matrix. The network weights in th
 
 ---
 
-In September 2016, 'nekel' changed initialization of the output layer to random and added normalization. This resulted in runs occasionally producing unexpected non-trivial dynamics. This was the first example of self-modifying dataflow matrix machine which takes into account its own state when deciding how to modify itself.
+In September 2016, 'nekel' changed initialization of the output layer to random and added normalization. This resulted in runs occasionally producing unexpected non-trivial interesting dynamics. This was the first example of a self-modifying dataflow matrix machine which takes into account its own state when deciding how to modify itself.
 
-In June 2018, 'anhinga' instrumented random initialization using explicit randomly drawn seeds, so that the discovered non-trivial dynamics can be reproduced. The resulting code with one of the interesting seeds is `afterlife_9_1_seed`.
+In June 2018, 'anhinga' instrumented initialization of random sampling using explicit randomly drawn seeds, so that the discovered non-trivial dynamics can be reproduced. The resulting code with one of the interesting seeds is `afterlife_9_1_seed`.
 
 ---
 
-Then a `pseudoconway` activation function inspired by (but different from) the function describing one time step of Conway's game of life was added, and became one of the available activation functions for the neurons of our networks. The resuling code with one of the interesting seeds is `afterlife_conway_1_seed`.
+Then a `pseudoconway` activation function inspired by (but different from) the function describing one time step of Conway's game of life was added, and became one of the available activation functions for the neurons of our network. The resulting code with one of the interesting seeds is `afterlife_conway_1_seed`.
 
 ---
 
@@ -34,7 +34,7 @@ Then the first version of an orchestrated demo was created. To do that we broke 
 
 ---
 
-Then we added 40 Hz sound (the cognitive effects and physiological effects of sound in gamma frequency range are under very active investigation by the neuroscience community at the moment, with rather spectacular preliminary results being reported; which is why we added a warning at the beginning of the demo, as 40 Hz sound is obviously a pretty active agent and should be used with caution).
+Then we added 40 Hz sound (the cognitive effects and physiological effects of sound in the gamma frequency range are under very active investigation by the neuroscience community at the moment, with rather spectacular preliminary results being reported; which is why we added a warning at the beginning of the demo, as 40 Hz sound is obviously a pretty active agent and should be used with caution, both in terms of volume and duration of exposure).
 
 We added overtones decreasing the amplitude for each next overtone 1.4-fold, line 186 in `afterlife_conway_5_seed_sound`: 
 
@@ -42,7 +42,7 @@ We added overtones decreasing the amplitude for each next overtone 1.4-fold, lin
 currentGain /= 1.4;
 ```
 
-Then we use the master row of the network matrix to make the amplitude quiter, if the weights in the master row are positive (in this run we use the convention that dark, negative cells correspond to live cells in terms of Conway's game of life, and light, positive cells correspond to dead cells, so it is louder when the corresponding cell is darker). These are lines 364-367 in `afterlife_conway_5_seed_sound`:
+Then we used the master row of the network matrix to make the amplitude more quiet at the current moment of time, if the weights in the master row were more positive (in this run we use the convention that dark, negative cells correspond to live cells in terms of Conway's game of life, and light, positive cells correspond to dead cells, so it is louder when the corresponding cell is darker (i.e. more negative, i.e. more alive)). These are lines 364-367 in `afterlife_conway_5_seed_sound`:
 
 ```processing
 for( int i = 0; i < n_outputs; i++) {
