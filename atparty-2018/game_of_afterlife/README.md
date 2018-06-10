@@ -28,7 +28,17 @@ Then the network size (and the size of the matrices it processes, for those are 
 
 ---
 
----
+Then the first version of an orchestrated demo was created. To do that we broke the purity of the machine by programming substitutions of activation functions of the neurons at preselected moments of time, aiming for a more entertaining overall dynamics. This resulted in `afterlife_conway_4_seed`.
 
 ---
 
+Then we added 40 Hz sound (the cognitive effects and physiological effects of sound in gamma frequency range are under very active investigation by the neuroscience community at the moment, with rather spectacular preliminary results being reported; which is why we added a warning at the beginning of the demo, as 40 Hz sound is obviously a pretty active agent and should be used with caution).
+
+We added overtones decreasing the amplitude for each next overtone 1.4-fold: `currentGain /= 1.4;`
+
+Then we use the master row of the network matrix to make the amplitude quiter, if the weights in the master row are positive (in this run we use the convention that dark, negative cells correspond to live cells in terms of Conway's game of life, and light, positive cells correspond to dead cells, so it is louder when the corresponding cell is darker). These are lines 364-367 in `afterlife_conway_5_seed_sound`:
+
+`for( int i = 0; i < n_outputs; i++) {`  
+       `float multiplier = 0.5 - 0.5 * outputs[0].matrix[1][i]; // we want to interpret -1 as 1, and 1 as 0`  
+        `gainGlide[i].setValue(initGain[i] * multiplier);`  
+`}`  
