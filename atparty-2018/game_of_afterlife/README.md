@@ -8,7 +8,7 @@ The code evolved from https://github.com/anhinga/fluid/tree/master/Lightweight_P
 
 That code is the first example of a self-modifying dataflow matrix machine (a more expressive version of neural network).
 
-The engine in all these cases is a small handcrafted recurrent neural network processing streams of matrixes instead of streams of numbers.
+The engine in all these cases is a small handcrafted recurrent neural network processing streams of matrices instead of streams of numbers.
 
 The master matrix containing the network weights is the top left rectangle.
 
@@ -24,4 +24,11 @@ Then a `pseudoconway` activation function inspired by (but different from) the f
 
 ---
 
+Then the network size (and the size of the matrices it processes, for those are the same as the network size for pure lightweight dataflow matrix machines) was increased, resulting in `afterlife_conway_2_seed`. Then the graphical shape of the presentation was changed: squares representing cells were replaced by narrow vertically oriented rectangles, improving the vertical to horizontal ratio of the demo window and changing the aesthetic feeling from the demo (`afterlife_conway_3_seed`).
+
+---
+
+---
+
+---
 
