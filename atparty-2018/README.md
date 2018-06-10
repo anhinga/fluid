@@ -1,4 +1,6 @@
-Materials of my June 9, 2018 compo entries for @party will be added on June 10.
+Materials of my June 9, 2018 compo entries for @party will be added on June 10 (upload in progress).
+
+The software is written in Processing 2.2.1, tested under Windows 10.
 
 * game of afterlife
 
