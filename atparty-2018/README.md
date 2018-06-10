@@ -1,4 +1,4 @@
-Materials of my June 9, 2018 compo entries for @party will be added on June 10 (surreal_webcam is now committed, game_of_afterlife to follow).
+Materials of my June 9, 2018 compo entries for @party will be added on June 10 (surreal_webcam is now committed, game_of_afterlife in progress).
 
 The software is written in Processing 2.2.1, tested under Windows 10.
 
