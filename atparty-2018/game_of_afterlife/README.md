@@ -47,6 +47,6 @@ Then we used the master row of the network matrix to make the amplitude more qui
 ```processing
 for( int i = 0; i < n_outputs; i++) {
       float multiplier = 0.5 - 0.5 * outputs[0].matrix[1][i]; // we want to interpret -1 as 1, and 1 as 0
-      gainGlide[i].setValue(initGain[i] * multiplier);`  
+      gainGlide[i].setValue(initGain[i] * multiplier);
 }
 ```
