@@ -1,4 +1,4 @@
-Materials of my June 9, 2018 compo entries for @party, http://atparty-demoscene.net/. This material has been posted on June 10 in order to comply with the @party compo rules.
+Materials of my June 9, 2018 compo entries for @party, http://atparty-demoscene.net/. (The release of this material was postponed till June 10 in order to comply with the @party compo rules of not entering previously released material in the compos.)
 
 The software is written in Processing 2.2.1, tested under Windows 10.
 
