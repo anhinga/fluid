@@ -38,3 +38,51 @@ for
 ```processing
 input_rectangle.img.copy(cam, 0, 0, 640, 480, 0, 0, 400, 300);
 ```
+
+---
+
+One can also transform movies through this pipeline. To do so, the following changes are required in the main file of the sketch (in this case, `surreal_webcam.pde`).
+
+Line 4: instead of
+
+```processing
+Capture cam;
+```
+
+use
+
+```processing
+Movie mov;
+```
+
+Lines 18-19: instead of webcam initialization
+
+```processing
+  cam = new Capture(this, 640, 480, 30);
+  cam.start();
+```
+
+use movie initialization (in this example, the movie file name is `MVI_9270.MOV`; the movie file must be in the `data` folder of your Processing sketch):
+
+```processing
+  mov = new Movie(this, "MVI_9270.MOV");
+  mov.loop();
+```
+
+Lines 27-30: instead of reading, copying, and, if necessary, resizing the next camera frame
+
+```processing
+  if(cam.available()) {
+    cam.read();
+  }
+  input_rectangle.img.copy(cam, 0, 0, 640, 480, 0, 0, 640, 480);
+```
+
+read, copy, and resize the next movie frame (in this example, the movie has 1920x1080 resolution; use the actual resolution of your movie):
+
+```processing
+  if(mov.available()) {
+    mov.read();
+  }
+  input_rectangle.img.copy(mov, 0, 0, 1920, 1080, 0, 0, 640, 480);
+```
