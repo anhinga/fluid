@@ -38,6 +38,12 @@ int previous_frameCount;
 
 int choice_flag;
 
+Boolean noloop_flag;
+
+int mutation_step_control;
+
+int mutation_step_flag;
+
 class Matrix {
   float [][] matrix;
   Matrix() {
@@ -204,7 +210,7 @@ class Network {
     for (int i = 0; i < n_inputs; i++) 
       for (int j = 0; j < n_outputs; j++) 
          for (int k = 0; k < n_outputs; k++) {
-           outputs[k].matrix[i][j] += 0.1*randomGaussian();
+           outputs[k].matrix[i][j] += 0.1*randomGaussian()/mutation_step_control;
          }      
   }
   
@@ -264,6 +270,11 @@ void setup() {
   }
   n_choices = 0;
   choice_flag = -1;
+  
+  noloop_flag = false;
+  
+  mutation_step_control = 1;
+  mutation_step_flag = 0;
 
   frameRate(2);
   
@@ -359,6 +370,15 @@ void draw() {
   
   if (choice_flag >= 0) next_generation();
   
+  if (mutation_step_flag != 0) {
+    choices[n_choices] = mutation_step_flag;
+    frame_moments[n_choices] = frameCount;
+    n_choices += 1;
+    if (mutation_step_flag == -1) mutation_step_control *= 2;
+    if ((mutation_step_flag == -2) && (mutation_step_control > 1)) mutation_step_control /= 2;
+    mutation_step_flag = 0;    
+  }
+  
   if ( (frameCount-previous_frameCount) == 10) {
     println("adding noise");
     for (int n = 1; n < n_networks; n++) networks[n].add_random_noise(seeds[n + this_generation*n_networks]);
@@ -368,7 +388,7 @@ void draw() {
   
   for (int n = 0; n < n_networks; n++) networks[n].up_movement();  
   
-  println(frameCount, seed, "frameRate", frameRate, networks[0].outputs[0].matrix[0][0], networks[0].outputs[0].matrix[1][1], networks[0].inputs[1].matrix[1][1]);
+  println(frameCount, seed, "frameRate", frameRate, mutation_step_control, networks[0].outputs[0].matrix[0][0], networks[0].outputs[0].matrix[1][1], networks[0].inputs[1].matrix[1][1]);
 
   if (n_choices > 0) {  
     print(n_choices, "choices:");
@@ -410,4 +430,11 @@ void keyPressed() {
   if (key == '2') choice_flag = 2;
   if (key == '3') choice_flag = 3;
   if (key == '4') choice_flag = 4;
+  if (key == ' ') {
+    if (noloop_flag) loop(); 
+    else noLoop();
+    noloop_flag = !noloop_flag;
+  }
+  if ((key == '-') || (key == '_')) mutation_step_flag = -1;
+  if ((key == '+') || (key == '=')) mutation_step_flag = -2;
 }
