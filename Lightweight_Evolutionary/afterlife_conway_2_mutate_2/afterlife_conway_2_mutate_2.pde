@@ -84,6 +84,38 @@ class Matrix {
       } 
   }
   
+  void vert_waves(Matrix arg, int hor_center, float distance_coef, float time_coef) { // flat wave in horizontal direction
+    for (int i = 0; i < n_inputs; i++) {
+      int d = abs(i - hor_center);
+      float mod = 0.25*sin(distance_coef*d + time_coef*frameCount);
+      int i_from = int(hor_center + (i-hor_center)*mod);
+      for (int j = 0; j < n_outputs; j++) {
+        matrix[i][j] = arg.matrix[i_from][j]; 
+      }
+    } 
+  }
+  
+    void hor_waves(Matrix arg, int vert_center, float distance_coef, float time_coef) { // flat wave in vertical direction
+    for (int j = 0; j < n_outputs; j++) {
+      int d = abs(j - vert_center);
+      float mod = 0.25*sin(distance_coef*d + time_coef*frameCount);
+      int j_from = int(vert_center + (j-vert_center)*mod);
+      for (int i = 0; i < n_inputs; i++) {
+        matrix[i][j] = arg.matrix[i][j_from]; 
+      }
+    } 
+  }
+  
+  void circ_waves(Matrix arg, int hor_center, int vert_center, float distance_coef, float time_coef) { // circular wave
+    for (int i = 0; i < n_inputs; i++) 
+      for (int j = 0; j < n_outputs; j++) {
+        float d = dist(i, j, hor_center, vert_center);
+        float mod = 0.25*sin(distance_coef*d + time_coef*frameCount);
+        int i_from = int(hor_center + (i-hor_center)*mod);
+        int j_from = int(vert_center + (j-vert_center)*mod);
+        matrix[i][j] = arg.matrix[i_from][j_from]; 
+      }
+  }
   
    // poor man sigmoid  - lena  
    void hammer() { 
@@ -230,9 +262,9 @@ class Network {
     // apply build-in transforms ("up movement")
     outputs[0].set_to_plus_constraint0(inputs[0], inputs[1]);
     //outputs[0].set_to_plus(inputs[0], inputs[1]);
-    outputs[2].pseudoconway(inputs[2]);
-    outputs[4].pseudoconway(inputs[4]);
-    outputs[6].pseudoconway(inputs[6]);
+    outputs[2].hor_waves(inputs[2], 11, 1.0, 1.0);
+    outputs[4].vert_waves(inputs[4], 11, 1.0, 0.5);
+    outputs[6].circ_waves(inputs[6], 11, 11, 1.0, 0.25);
     outputs[8].pseudoconway(inputs[8]);
     outputs[10].pseudoconway(inputs[10]); 
     //outputs[2].set_to_plus(inputs[2], inputs[3]);
