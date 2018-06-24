@@ -87,7 +87,7 @@ class Matrix {
   void vert_waves(Matrix arg, int hor_center, float distance_coef, float time_coef) { // flat wave in horizontal direction
     for (int i = 0; i < n_inputs; i++) {
       int d = abs(i - hor_center);
-      float mod = 0.25*sin(distance_coef*d + time_coef*frameCount);
+      float mod = 0.25*sin(distance_coef*d + time_coef*frameCount); //+0.75;
       int i_from = int(hor_center + (i-hor_center)*mod);
       for (int j = 0; j < n_outputs; j++) {
         matrix[i][j] = arg.matrix[i_from][j]; 
@@ -98,7 +98,7 @@ class Matrix {
     void hor_waves(Matrix arg, int vert_center, float distance_coef, float time_coef) { // flat wave in vertical direction
     for (int j = 0; j < n_outputs; j++) {
       int d = abs(j - vert_center);
-      float mod = 0.25*sin(distance_coef*d + time_coef*frameCount);
+      float mod = 0.25*sin(distance_coef*d + time_coef*frameCount); //+0.75;
       int j_from = int(vert_center + (j-vert_center)*mod);
       for (int i = 0; i < n_inputs; i++) {
         matrix[i][j] = arg.matrix[i][j_from]; 
@@ -110,7 +110,10 @@ class Matrix {
     for (int i = 0; i < n_inputs; i++) 
       for (int j = 0; j < n_outputs; j++) {
         float d = dist(i, j, hor_center, vert_center);
-        float mod = 0.25*sin(distance_coef*d + time_coef*frameCount);
+        float mod = 0.25*sin(distance_coef*d + time_coef*frameCount); //+0.75; -- this is necessary for correctness, if the center is
+                                                                      //          close to the border, but a correct version does not
+                                                                      //          produce sufficiently pronounced patterns - we'll reconcile
+                                                                      //          this later
         int i_from = int(hor_center + (i-hor_center)*mod);
         int j_from = int(vert_center + (j-vert_center)*mod);
         matrix[i][j] = arg.matrix[i_from][j_from]; 
@@ -262,11 +265,17 @@ class Network {
     // apply build-in transforms ("up movement")
     outputs[0].set_to_plus_constraint0(inputs[0], inputs[1]);
     //outputs[0].set_to_plus(inputs[0], inputs[1]);
-    outputs[2].hor_waves(inputs[2], 11, 1.0, 1.0);
-    outputs[4].vert_waves(inputs[4], 11, 1.0, 0.5);
+    outputs[2].circ_waves(inputs[2], 11, 11, 1.0, 1.0);
+    outputs[4].circ_waves(inputs[4], 11, 11, 1.0, 0.5);
     outputs[6].circ_waves(inputs[6], 11, 11, 1.0, 0.25);
-    outputs[8].pseudoconway(inputs[8]);
-    outputs[10].pseudoconway(inputs[10]); 
+    outputs[8].circ_waves(inputs[8], 11, 11, 1.0, 1.0);
+    outputs[10].circ_waves(inputs[10], 11, 11, 1.0, 0.5);
+    outputs[12].circ_waves(inputs[12], 11, 11, 1.0, 0.25);
+    outputs[14].circ_waves(inputs[14], 11, 11, 1.0, 1.0);
+    outputs[16].circ_waves(inputs[16], 11, 11, 1.0, 0.5);
+    outputs[18].circ_waves(inputs[18], 11, 11, 1.0, 0.25);
+    outputs[20].pseudoconway(inputs[20]);
+    outputs[22].pseudoconway(inputs[22]); 
     //outputs[2].set_to_plus(inputs[2], inputs[3]);
     //outputs[4].set_to_mult(inputs[4], inputs[5]);
     //outputs[6].set_to_mult(inputs[6], inputs[7]);
@@ -312,7 +321,7 @@ void setup() {
   
   previous_frameCount = 0;
   
-  seed = int(random(1000000));
+  //seed = int(random(1000000));
   
   //seed = 746484;
   //seed = 300032;
@@ -327,13 +336,17 @@ void setup() {
   
   //seed = 149317;
   
-  // for this mutate_2 run
+  // for this mutate_2 run with 5 conways
   
   //1743 29328 frameRate 1.9997165 1.0 2.2047155 1.5999374
   //5 choices: ( 4 38 )  ( 2 125 )  ( 0 189 )  ( 0 219 )  ( 3 249 ) 
 
   //2953 757978 frameRate 1.999785 1.0 1.7866802 1.2663258
   //2 choices: ( 4 135 )  ( 0 201 ) 
+  
+  // for mutate_2 run with a lot of circular waves
+  
+  seed = 346010;  // looks good, although I suspect that arbitrary random seed would do
   
   randomSeed(seed);
   
