@@ -321,7 +321,7 @@ void setup() {
   
   previous_frameCount = 0;
   
-  //seed = int(random(1000000));
+  // seed = int(random(1000000));
   
   //seed = 746484;
   //seed = 300032;
@@ -346,7 +346,22 @@ void setup() {
   
   // for mutate_2 run with a lot of circular waves
   
-  seed = 346010;  // looks good, although I suspect that arbitrary random seed would do
+  seed = 346010;  // looks good (arbitrary random seed does not look that good)
+  
+  /*** for this up movement
+    outputs[0].set_to_plus_constraint0(inputs[0], inputs[1]);
+    outputs[2].circ_waves(inputs[2], 11, 11, 1.0, 1.0);
+    outputs[4].circ_waves(inputs[4], 11, 11, 1.0, 0.5);
+    outputs[6].circ_waves(inputs[6], 11, 11, 1.0, 0.25);
+    outputs[8].circ_waves(inputs[8], 11, 11, 1.0, 1.0);
+    outputs[10].circ_waves(inputs[10], 11, 11, 1.0, 0.5);
+    outputs[12].circ_waves(inputs[12], 11, 11, 1.0, 0.25);
+    outputs[14].circ_waves(inputs[14], 11, 11, 1.0, 1.0);
+    outputs[16].circ_waves(inputs[16], 11, 11, 1.0, 0.5);
+    outputs[18].circ_waves(inputs[18], 11, 11, 1.0, 0.25);
+    outputs[20].pseudoconway(inputs[20]);
+    outputs[22].pseudoconway(inputs[22]); 
+  ***/  
   
   randomSeed(seed);
   
