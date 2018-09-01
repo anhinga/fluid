@@ -32,6 +32,7 @@ int n_choices;
 int [] choices;
 int [] frame_moments;
 
+
 PImage init_img;
 
 int previous_frameCount;
@@ -137,6 +138,14 @@ class Matrix {
     for (int i = 0; i < n_inputs; i++)
       for (int j = 0; j < n_outputs; j++)         
           matrix[i][j] = matrix[i][j]/M;    
+  }
+  
+  float size_of_squeeze() {
+    float M=0.;
+    for (int i = 0; i < n_inputs; i++)
+      for (int j = 0; j < n_outputs; j++) 
+        M=max(M,abs(matrix[i][j])); 
+    return M;    
   }
   
   void add_with_coef(float coef, Matrix summand) {
@@ -263,7 +272,12 @@ class Network {
   
   void up_movement() {
     // apply build-in transforms ("up movement")
+    
+    // ***** comment the next line out, if you want to fix the network matrix  ******
+    
     outputs[0].set_to_plus_constraint0(inputs[0], inputs[1]);
+    
+    
     //outputs[0].set_to_plus(inputs[0], inputs[1]);
     outputs[2].circ_waves(inputs[2], 11, 11, 1.0, 1.0);
     outputs[4].circ_waves(inputs[4], 11, 11, 1.0, 0.5);
@@ -300,6 +314,8 @@ class Network {
 }
 
 Network[] networks;
+
+float[] current_squeezes;
 
 void setup() {
   
@@ -370,6 +386,9 @@ void setup() {
   for (int n = 0; n < n_seeds; n++) {
     seeds[n] = int(random(1000000));
   }
+
+  
+  current_squeezes = new float[n_networks];
   
   networks = new Network[n_networks];
   for (int n = 0; n < n_networks; n++) networks[n] = new Network();
@@ -459,6 +478,8 @@ void draw() {
   for (int n = 0; n < n_networks; n++) {
     networks[n].outputs[0].matrix[current_row][current_column_1] += 0.01*relative_frameCount*(n-2);
     networks[n].outputs[0].matrix[current_row][current_column_2] -= 0.01*relative_frameCount*(n-2);
+    //networks[n].outputs[0].matrix[current_row][current_column_1] += 0.01*(n-2);
+    //networks[n].outputs[0].matrix[current_row][current_column_2] -= 0.01*(n-2);
   }
 
   for (int n = 0; n < n_networks; n++) networks[n].down_movement();  
@@ -472,6 +493,10 @@ void draw() {
     for (int n = 0; n < n_choices; n++) print(" (", choices[n], frame_moments[n], ") ");
     println();
   }
+  
+  for (int n = 0; n < n_networks; n++) current_squeezes[n] = networks[n].outputs[0].size_of_squeeze();
+  
+  println("squeezes: ", current_squeezes[0], current_squeezes[1], current_squeezes[2], current_squeezes[3], current_squeezes[4]);
   
   // draw all matrices
   
