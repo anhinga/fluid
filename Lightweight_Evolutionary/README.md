@@ -15,5 +15,6 @@ but this directory is just a beginning of an attempt to do something similar in 
 
 `afterlife_balanced_coord_updates` - initial instrumentation for "balanced coordinate updates",
 a version of https://github.com/jsa-aerial/DMM/blob/master/design-notes/Early-2017/population-coordinate-descent.md
-which picks a random matrix row, two weights within that row, and starts adjusting the matrix
+
+this particular version picks a random matrix row, two weights within that row, and starts adjusting the matrix
 by alpha*(w_ij - w_ik).
