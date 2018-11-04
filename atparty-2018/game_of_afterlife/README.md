@@ -1,5 +1,9 @@
 Code progression towards `game_of_afterlife` @party demo has been uploaded to this directory.
 
+See also Section 1.2 of "DMM technical report 11-2018":
+
+https://github.com/jsa-aerial/DMM/tree/master/technical-report-2018
+
 The last of those demos contains audio and requires the install of Beads library for Processing 2.2.1: http://www.beadsproject.net/
 
 ---
