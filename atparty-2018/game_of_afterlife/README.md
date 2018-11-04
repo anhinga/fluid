@@ -1,6 +1,6 @@
 Code progression towards `game_of_afterlife` @party demo has been uploaded to this directory.
 
-(See also Section 1.2 of _DMM technical report 11-2018_:
+( See also Section 1.2 of _"DMM technical report 11-2018"_:
 
 https://github.com/jsa-aerial/DMM/tree/master/technical-report-2018 )
 
