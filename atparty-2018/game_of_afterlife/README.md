@@ -8,6 +8,8 @@ The last of those demos contains audio and requires the install of Beads library
 
 ---
 
+The software is written in Processing 2.2.1, tested under Windows 7 and 10.
+
 The code evolved from https://github.com/anhinga/fluid/tree/master/Lightweight_Pure_DMMs (`aug_27_16_experiment`), described in Appendix D of https://arxiv.org/abs/1610.00831
 
 That `aug_27_16_experiment` code is the first example of a self-modifying dataflow matrix machine (a more expressive version of neural networks).
