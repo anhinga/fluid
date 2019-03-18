@@ -149,4 +149,4 @@ https://github.com/jsa-aerial/DMM
 
 ### -------------
 
-**January 24, 2019:** [Processing Community Day in Boston](https://medium.com/fathominfo/pcd-boston-2019-734b11d8865f) (The [slides](https://github.com/anhinga/fluid/blob/master/ProcessingCommunityDayJan24-19.pdf) for my lightning talk)
+**January 24, 2019:** [Processing Community Day in Boston](https://medium.com/fathominfo/pcd-boston-2019-734b11d8865f) (The [slides](https://github.com/anhinga/fluid/blob/master/ProcessingCommunityDayJan24-19.pdf) for my lightning talk, _Neuromorphic visual computations in Processing_)
