@@ -146,3 +146,7 @@ Latest presentation, "Self-Referential Mechanism for Dataflow Matrix Machines an
 
 New open source effort to implement Dataflow Matrix Machines in Clojure:
 https://github.com/jsa-aerial/DMM
+
+### -------------
+
+**January 24, 2019:** [Processing Community Day in Boston](https://medium.com/fathominfo/pcd-boston-2019-734b11d8865f) [My slides](https://github.com/anhinga/fluid/blob/master/ProcessingCommunityDayJan24-19.pdf)
