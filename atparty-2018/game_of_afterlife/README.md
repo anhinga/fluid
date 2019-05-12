@@ -32,6 +32,10 @@ In June 2018, 'anhinga' instrumented initialization of random sampling using exp
 
 Then a `pseudoconway` activation function inspired by (but different from) the function describing one time step of Conway's game of life was added, and became one of the available activation functions for the neurons of our network. The resulting code with one of the interesting seeds is `afterlife_conway_1_seed`. Running this code, one can see a different kind of emerging bistability (transitions between states where input matrices are generally positive, and states where input matrices are generally negative; this kind of emerging bistability is observed in the subsequent experiments below as well).
 
+A video of the bistability in question is available at
+
+https://youtu.be/CKVwsQEMNjY
+
 ---
 
 Then the network size (and the size of the matrices it processes, for those are the same as the network size for pure lightweight dataflow matrix machines) was increased, resulting in `afterlife_conway_2_seed`. Then the graphical shape of the presentation was changed: squares representing cells were replaced by narrow vertically oriented rectangles, improving the vertical to horizontal ratio of the demo window and changing the aesthetic feeling from the demo (`afterlife_conway_3_seed`).
