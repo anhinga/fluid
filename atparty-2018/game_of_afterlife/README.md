@@ -28,6 +28,10 @@ In September 2016, 'nekel' changed initialization of the output layer to random 
 
 In June 2018, 'anhinga' instrumented initialization of random sampling using explicit randomly drawn seeds, so that the discovered non-trivial dynamics can be reproduced. The resulting code with one of the interesting seeds is `afterlife_9_1_seed`. Running this code, one can see emerging wake-sleep pattern.
 
+A video of the emerging wake-sleep pattern in question is available at
+
+https://youtu.be/_mZVVU8x3bs
+
 ---
 
 Then a `pseudoconway` activation function inspired by (but different from) the function describing one time step of Conway's game of life was added, and became one of the available activation functions for the neurons of our network. The resulting code with one of the interesting seeds is `afterlife_conway_1_seed`. Running this code, one can see a different kind of emerging bistability (transitions between states where input matrices are generally positive, and states where input matrices are generally negative; this kind of emerging bistability is observed in the subsequent experiments below as well).
