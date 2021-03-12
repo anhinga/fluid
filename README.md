@@ -64,7 +64,7 @@ in the following preprint on linear models of computation:
 http://www.cs.brandeis.edu/~bukatin/LinearModelsProgramLearning.pdf
 
 The reference publication in the proceedings of GCAI 2015:
-http://easychair.org/publications/download/Linear_Models_of_Computation_and_Program_Learning
+https://easychair.org/publications/paper/Q4lW
 
 An essay describing the history of this project (Dec 2015):
 http://www.cs.brandeis.edu/~bukatin/linear-models-of-computation-finally.html
