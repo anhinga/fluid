@@ -15,3 +15,5 @@ Performance recording: https://scenesat.com/videoarchive/66 starting at 13:03:10
 **Surreal webcam** is obtained by connecting a web camera to our earlier pipeline transforming image streams (`may_9_15_experiment` directory on the top level of this repository), enabling interesting interactive performances, so this was entered as a freestyle interactive compo.
 
 Performance recording: https://scenesat.com/videoarchive/66 starting at 12:40:25.
+
+Sep 4, 2023: current URL is https://scenesat.com/videoarchive/250b7312-b90e-11ea-b68e-00505685775e#show-250b7312-b90e-11ea-b68e-00505685775e
